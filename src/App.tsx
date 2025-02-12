@@ -12,6 +12,7 @@ import Solutions from "./pages/Solutions";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/auth/SignIn";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/success" element={<Success />} />
           <Route path="/product/:id" element={<Platform />} />
           <Route path="/auth/sign-in" element={<SignIn />} />
