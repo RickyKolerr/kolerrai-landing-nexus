@@ -6,21 +6,23 @@ import { MainNav } from "@/components/main-nav";
 const Index = () => {
   return (
     <div className="relative min-h-screen">
-      {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
         <div className="container flex h-16 items-center">
           <MainNav />
         </div>
       </header>
 
-      {/* Main content with padding for fixed header */}
       <div className="pt-16">
-        {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 hero-gradient opacity-10" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
           <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32">
             <div className="mx-auto max-w-3xl text-center">
+              <img 
+                src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png" 
+                alt="Kolerr" 
+                className="h-20 mx-auto mb-8 hover-scale"
+              />
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
                 The Future of AI-powered PaaS & SaaS Starts Here!
               </h1>
@@ -28,7 +30,7 @@ const Index = () => {
                 Advanced AI technology to optimize, automate, and scale businesses
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
-                <ButtonGradient size="lg" className="hover-lift">Start Free Trial</ButtonGradient>
+                <ButtonGradient size="lg" className="hover-lift glow">Start Free Trial</ButtonGradient>
                 <ButtonGradient size="lg" variant="outline" className="hover-lift">
                   Watch Demo
                 </ButtonGradient>
@@ -37,13 +39,12 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Why KolerrAI Section */}
         <section className="relative overflow-hidden bg-secondary/30 py-24">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Why KolerrAI?
+                Why Kolerr?
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
                 Experience the power of next-generation AI technology
@@ -82,7 +83,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Final CTA Section */}
         <section className="relative overflow-hidden py-24">
           <div className="absolute inset-0 hero-gradient opacity-5" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />

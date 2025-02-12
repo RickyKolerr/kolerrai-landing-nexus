@@ -1,28 +1,29 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 244 47% 20%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 262 83% 58%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --background: 228 98% 4%;
+    --foreground: 0 0% 100%;
+    --card: 228 98% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 228 98% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 228 98% 8%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 228 98% 12%;
+    --muted-foreground: 215.4 16.3% 75%;
+    --accent: 326 100% 60%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262 83% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 228 98% 12%;
+    --input: 228 98% 12%;
+    --ring: 326 100% 60%;
     --radius: 0.75rem;
   }
 
@@ -42,15 +43,16 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
   }
 
   .hero-gradient {
-    @apply bg-gradient-to-br from-primary via-primary/90 to-accent/50;
+    background: linear-gradient(45deg, #00E5FF, #0066FF, #D100D1, #FF4081);
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #00E5FF, #0066FF, #D100D1, #FF4081);
   }
 
   .glow {
@@ -58,7 +60,7 @@
     &::after {
       @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-500;
       content: '';
-      background: radial-gradient(circle at center, theme('colors.accent.DEFAULT') 0%, transparent 70%);
+      background: radial-gradient(circle at center, #D100D1 0%, transparent 70%);
       filter: blur(15px);
     }
     &:hover::after {
