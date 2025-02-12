@@ -2,8 +2,12 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Blog = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
   const categories = ["All", "AI & ML", "Enterprise", "Tech News", "Case Studies"];
   const blogPosts = [
     {
@@ -34,6 +38,21 @@ const Blog = () => {
       imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     },
   ];
+
+  const handleReadMore = (id: number) => {
+    toast({
+      title: "Opening article...",
+      description: "Loading the full article content",
+    });
+    navigate(`/blog/${id}`);
+  };
+
+  const handleSubscribe = () => {
+    toast({
+      title: "Thanks for subscribing!",
+      description: "You'll receive our latest articles in your inbox.",
+    });
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -100,7 +119,12 @@ const Blog = () => {
                     <p className="text-muted-foreground mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <ButtonGradient variant="outline" size="sm" className="px-0 hover:bg-transparent">
+                    <ButtonGradient 
+                      variant="outline" 
+                      size="sm" 
+                      className="px-0 hover:bg-transparent"
+                      onClick={() => handleReadMore(post.id)}
+                    >
                       Read More →
                     </ButtonGradient>
                   </div>
@@ -121,7 +145,7 @@ const Blog = () => {
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
                   />
-                  <ButtonGradient>Subscribe</ButtonGradient>
+                  <ButtonGradient onClick={handleSubscribe}>Subscribe</ButtonGradient>
                 </div>
               </div>
             </div>

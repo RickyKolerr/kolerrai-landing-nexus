@@ -3,8 +3,21 @@ import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart } 
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
 import { EnhancedNav } from "@/components/enhanced-nav";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -27,8 +40,19 @@ const Index = () => {
                 Unlock the next level of cloud solutions with AI automation, scalability, and efficiency
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
-                <ButtonGradient size="lg" className="hover-lift glow">Start Free Trial</ButtonGradient>
-                <ButtonGradient size="lg" variant="outline" className="hover-lift">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow"
+                  onClick={() => handleNavigation('/pricing')}
+                >
+                  Start Free Trial
+                </ButtonGradient>
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline" 
+                  className="hover-lift"
+                  onClick={() => handleNavigation('/features')}
+                >
                   Explore Features
                 </ButtonGradient>
               </div>
@@ -136,9 +160,25 @@ const Index = () => {
               <p className="mb-8 text-lg text-muted-foreground slide-up" style={{ animationDelay: "0.2s" }}>
                 Start your 14-day free trial today. No credit card required.
               </p>
-              <ButtonGradient size="lg" className="hover-lift glow slide-up" style={{ animationDelay: "0.4s" }}>
-                Try for Free - 14 Days
-              </ButtonGradient>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow slide-up" 
+                  style={{ animationDelay: "0.4s" }}
+                  onClick={() => handleNavigation('/pricing')}
+                >
+                  Try for Free - 14 Days
+                </ButtonGradient>
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline" 
+                  className="hover-lift slide-up" 
+                  style={{ animationDelay: "0.4s" }}
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Contact Sales
+                </ButtonGradient>
+              </div>
             </div>
           </div>
         </section>
