@@ -3,9 +3,19 @@ import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { BrainCircuit, Bot, Cpu, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Products = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to the product details",
+    });
+    navigate(path);
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -48,12 +58,21 @@ const Products = () => {
                     <span>AI-powered Automation</span>
                   </li>
                 </ul>
-                <ButtonGradient 
-                  className="w-full"
-                  onClick={() => navigate('/product/platform')}
-                >
-                  Learn More
-                </ButtonGradient>
+                <div className="space-y-4">
+                  <ButtonGradient 
+                    className="w-full"
+                    onClick={() => handleNavigation('/product/platform')}
+                  >
+                    Learn More
+                  </ButtonGradient>
+                  <ButtonGradient 
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => handleNavigation('/pricing')}
+                  >
+                    Start Free Trial
+                  </ButtonGradient>
+                </div>
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
@@ -78,11 +97,39 @@ const Products = () => {
                     <span>Workflow Automation</span>
                   </li>
                 </ul>
+                <div className="space-y-4">
+                  <ButtonGradient 
+                    className="w-full"
+                    onClick={() => handleNavigation('/product/services')}
+                  >
+                    Learn More
+                  </ButtonGradient>
+                  <ButtonGradient 
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => handleNavigation('/pricing')}
+                  >
+                    Start Free Trial
+                  </ButtonGradient>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-24 text-center">
+              <h2 className="text-2xl font-semibold mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-muted-foreground mb-8">
+                Get started with KolerrAI today and experience the power of AI
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <ButtonGradient onClick={() => handleNavigation('/pricing')}>
+                  Start Free Trial
+                </ButtonGradient>
                 <ButtonGradient 
-                  className="w-full"
-                  onClick={() => navigate('/product/services')}
+                  variant="outline"
+                  onClick={() => handleNavigation('/contact')}
                 >
-                  Learn More
+                  Contact Sales
                 </ButtonGradient>
               </div>
             </div>
