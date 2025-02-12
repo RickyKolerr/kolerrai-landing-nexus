@@ -9,6 +9,7 @@ interface FeatureCardProps {
   description: string;
   className?: string;
   style?: CSSProperties;
+  onClick?: () => void;
 }
 
 export function FeatureCard({
@@ -17,6 +18,7 @@ export function FeatureCard({
   description,
   className,
   style,
+  onClick,
 }: FeatureCardProps) {
   return (
     <div
@@ -27,6 +29,9 @@ export function FeatureCard({
         className
       )}
       style={style}
+      onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
     >
       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-6 w-6" />
