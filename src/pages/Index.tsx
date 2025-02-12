@@ -54,6 +54,24 @@ const Index = () => {
           </div>
         </section>
 
+        <section className="relative overflow-hidden py-24 bg-secondary/30">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="text-center max-w-2xl mx-auto">
+              <img
+                src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
+                alt="Ricky Anh Nguyen"
+                className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-accent/20 hover-scale"
+              />
+              <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
+              <p className="text-accent mb-6">CEO & Founder</p>
+              <p className="text-xl text-muted-foreground italic">
+                "Our mission is to democratize AI technology, making enterprise-grade solutions accessible to businesses of all sizes. Together, we're building the future of cloud computing."
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="relative overflow-hidden bg-secondary/30 py-24">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
           <div className="relative mx-auto max-w-7xl px-6">
