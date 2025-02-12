@@ -1,8 +1,9 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { PaymentModal } from "@/components/payment/PaymentModal";
 import {
   Table,
   TableBody,
@@ -12,11 +13,25 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+interface PlanDetails {
+  name: string;
+  price: string;
+  interval: "monthly" | "yearly";
+}
+
 const Pricing = () => {
   const navigate = useNavigate();
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<PlanDetails | null>(null);
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
+  const handlePlanSelection = (plan: PlanDetails) => {
+    setSelectedPlan(plan);
+    setIsPaymentModalOpen(true);
+  };
+
+  const handlePaymentModalClose = () => {
+    setIsPaymentModalOpen(false);
+    setSelectedPlan(null);
   };
 
   return (
@@ -37,14 +52,12 @@ const Pricing = () => {
               </p>
             </div>
 
-            {/* SaaS Plans Section */}
             <div className="mb-20">
               <h2 className="text-3xl font-bold text-center mb-8">SaaS Subscription Plans</h2>
               <p className="text-center text-muted-foreground mb-12">
                 For direct AI platform users with comprehensive feature access
               </p>
               <div className="grid gap-8 md:grid-cols-4">
-                {/* Starter Plan */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <h3 className="text-2xl font-semibold mb-2">Starter</h3>
                   <div className="text-3xl font-bold mb-2">$29<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
@@ -56,13 +69,12 @@ const Pricing = () => {
                   </ul>
                   <ButtonGradient 
                     className="w-full hover-lift"
-                    onClick={() => handleNavigation('/contact')}
+                    onClick={() => handlePlanSelection({ name: "Starter", price: "$29", interval: "monthly" })}
                   >
                     Start Free Trial
                   </ButtonGradient>
                 </div>
 
-                {/* Growth Plan */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border-2 border-accent hover-lift relative">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm">
                     Most Popular
@@ -78,13 +90,12 @@ const Pricing = () => {
                   </ul>
                   <ButtonGradient 
                     className="w-full hover-lift glow"
-                    onClick={() => handleNavigation('/contact')}
+                    onClick={() => handlePlanSelection({ name: "Growth", price: "$99", interval: "monthly" })}
                   >
                     Start 14-Day Trial
                   </ButtonGradient>
                 </div>
 
-                {/* Enterprise Plan */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <h3 className="text-2xl font-semibold mb-2">Enterprise</h3>
                   <div className="text-3xl font-bold mb-2">$249<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
@@ -97,13 +108,12 @@ const Pricing = () => {
                   </ul>
                   <ButtonGradient 
                     className="w-full hover-lift"
-                    onClick={() => handleNavigation('/contact')}
+                    onClick={() => handlePlanSelection({ name: "Enterprise", price: "$249", interval: "monthly" })}
                   >
                     Start Free Trial
                   </ButtonGradient>
                 </div>
 
-                {/* Custom Plan */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <h3 className="text-2xl font-semibold mb-2">Custom</h3>
                   <div className="text-3xl font-bold mb-2">Custom</div>
@@ -116,7 +126,7 @@ const Pricing = () => {
                   </ul>
                   <ButtonGradient 
                     className="w-full hover-lift"
-                    onClick={() => handleNavigation('/contact')}
+                    onClick={() => navigate('/contact')}
                   >
                     Contact Sales
                   </ButtonGradient>
@@ -124,7 +134,6 @@ const Pricing = () => {
               </div>
             </div>
 
-            {/* PaaS API Pricing Section */}
             <div className="mt-24">
               <h2 className="text-3xl font-bold text-center mb-8">PaaS API Pricing</h2>
               <p className="text-center text-muted-foreground mb-12">
@@ -175,7 +184,7 @@ const Pricing = () => {
                 <ButtonGradient 
                   size="lg"
                   className="hover-lift glow"
-                  onClick={() => handleNavigation('/contact')}
+                  onClick={() => handlePlanSelection({ name: "Custom", price: "Custom", interval: "monthly" })}
                 >
                   Get API Access
                 </ButtonGradient>
