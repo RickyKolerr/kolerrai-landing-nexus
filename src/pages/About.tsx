@@ -50,7 +50,7 @@ const About = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
+                    src="/lovable-uploads/99c4eb06-a618-421b-a272-81e310d4431d.png"
                     alt="Ricky Anh Nguyen"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />
@@ -63,7 +63,7 @@ const About = () => {
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
                     alt="David Chen"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />
@@ -76,7 +76,7 @@ const About = () => {
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
+                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
                     alt="Sarah Mitchell"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />

@@ -61,7 +61,7 @@ const Index = () => {
             <div className="text-center max-w-2xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <img
-                  src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
+                  src="/lovable-uploads/99c4eb06-a618-421b-a272-81e310d4431d.png"
                   alt="Ricky Anh Nguyen"
                   className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 hover-scale"
                 />
