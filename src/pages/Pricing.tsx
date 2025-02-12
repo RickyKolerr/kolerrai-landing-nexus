@@ -2,8 +2,21 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Pricing = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -32,7 +45,12 @@ const Pricing = () => {
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Basic support</li>
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 5 team members</li>
                 </ul>
-                <ButtonGradient className="w-full">Get Started</ButtonGradient>
+                <ButtonGradient 
+                  className="w-full hover-lift"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Get Started
+                </ButtonGradient>
               </div>
 
               {/* Pro Plan */}
@@ -48,7 +66,12 @@ const Pricing = () => {
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Priority support</li>
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 20 team members</li>
                 </ul>
-                <ButtonGradient className="w-full">Get Started</ButtonGradient>
+                <ButtonGradient 
+                  className="w-full hover-lift glow"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Get Started
+                </ButtonGradient>
               </div>
 
               {/* Enterprise Plan */}
@@ -61,7 +84,12 @@ const Pricing = () => {
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 24/7 dedicated support</li>
                   <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Unlimited team members</li>
                 </ul>
-                <ButtonGradient className="w-full">Contact Sales</ButtonGradient>
+                <ButtonGradient 
+                  className="w-full hover-lift"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Contact Sales
+                </ButtonGradient>
               </div>
             </div>
           </div>

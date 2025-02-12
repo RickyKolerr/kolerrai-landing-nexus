@@ -1,8 +1,21 @@
 
 import { MainNav } from "@/components/main-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Solutions = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   return (
     <div className="relative min-h-screen">
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
@@ -23,21 +36,46 @@ const Solutions = () => {
               <p className="text-lg text-muted-foreground sm:text-xl mb-8 slide-up">
                 Custom AI solutions tailored to your business needs
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Schedule Consultation
+                </ButtonGradient>
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => handleNavigation('/platform')}
+                >
+                  Explore Platform
+                </ButtonGradient>
+              </div>
             </div>
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
+              <div 
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift cursor-pointer"
+                onClick={() => handleNavigation('/platform/healthcare')}
+              >
                 <h3 className="text-2xl font-semibold mb-4">Healthcare AI</h3>
                 <p className="text-muted-foreground">
                   AI-powered diagnostics and patient care optimization
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
+              <div 
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift cursor-pointer"
+                onClick={() => handleNavigation('/platform/finance')}
+              >
                 <h3 className="text-2xl font-semibold mb-4">Finance AI</h3>
                 <p className="text-muted-foreground">
                   Intelligent financial forecasting and risk assessment
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
+              <div 
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift cursor-pointer"
+                onClick={() => handleNavigation('/platform/retail')}
+              >
                 <h3 className="text-2xl font-semibold mb-4">Retail AI</h3>
                 <p className="text-muted-foreground">
                   Smart inventory and customer behavior analysis

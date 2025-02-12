@@ -1,8 +1,29 @@
 
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you shortly.",
+    });
+  };
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -21,11 +42,12 @@ const Contact = () => {
               </p>
             </div>
             <div className="max-w-lg mx-auto">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
                     type="text"
+                    required
                     className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
                   />
                 </div>
@@ -33,6 +55,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
                     type="email"
+                    required
                     className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
                   />
                 </div>
@@ -40,11 +63,31 @@ const Contact = () => {
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <textarea
                     rows={4}
+                    required
                     className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
                   />
                 </div>
-                <ButtonGradient className="w-full">Send Message</ButtonGradient>
+                <ButtonGradient type="submit" className="w-full hover-lift glow">
+                  Send Message
+                </ButtonGradient>
               </form>
+              <div className="mt-8 text-center">
+                <p className="text-muted-foreground mb-4">Or explore our solutions</p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <ButtonGradient 
+                    variant="outline"
+                    onClick={() => handleNavigation('/platform')}
+                  >
+                    View Platform
+                  </ButtonGradient>
+                  <ButtonGradient 
+                    variant="outline"
+                    onClick={() => handleNavigation('/pricing')}
+                  >
+                    See Pricing
+                  </ButtonGradient>
+                </div>
+              </div>
             </div>
           </div>
         </section>
