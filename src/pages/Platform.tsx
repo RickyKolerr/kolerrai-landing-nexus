@@ -2,8 +2,21 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Cpu, Shield, Zap, Cloud, LineChart, Code } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Platform = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   const features = [
     {
       icon: Cpu,
@@ -54,10 +67,18 @@ const Platform = () => {
                 A comprehensive AI platform built for enterprise scale
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <ButtonGradient size="lg" className="hover-lift glow">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow"
+                  onClick={() => handleNavigation('/pricing')}
+                >
                   Start Free Trial
                 </ButtonGradient>
-                <ButtonGradient size="lg" variant="outline">
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => handleNavigation('/contact')}
+                >
                   View Documentation
                 </ButtonGradient>
               </div>
@@ -68,8 +89,9 @@ const Platform = () => {
               {features.map((feature, index) => (
                 <div 
                   key={feature.title}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift"
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => handleNavigation(`/product/${feature.title.toLowerCase().replace(/\s+/g, '-')}`)}
                 >
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6">
                     <feature.icon className="h-6 w-6" />
@@ -123,6 +145,30 @@ const Platform = () => {
                     </li>
                   </ul>
                 </div>
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="mt-24 text-center">
+              <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
+              <p className="text-muted-foreground mb-8">
+                Join thousands of businesses transforming their operations with KolerrAI
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow"
+                  onClick={() => handleNavigation('/pricing')}
+                >
+                  Start Free Trial
+                </ButtonGradient>
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Schedule Demo
+                </ButtonGradient>
               </div>
             </div>
           </div>

@@ -3,8 +3,21 @@ import { EnhancedNav } from "@/components/enhanced-nav";
 import { FeatureCard } from "@/components/feature-card";
 import { BrainCircuit, Bot, Cpu, Database, Code, LineChart, Cloud, Lock } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Features = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleNavigation = (path: string) => {
+    toast({
+      title: "Navigating...",
+      description: "Taking you to explore more",
+    });
+    navigate(path);
+  };
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -28,57 +41,65 @@ const Features = () => {
                 icon={BrainCircuit}
                 title="Smart Automation"
                 description="AI-driven workflows that automate complex business processes"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.1s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Bot}
                 title="AI Assistant"
                 description="24/7 intelligent support for your customers and team"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.2s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Cpu}
                 title="Machine Learning"
                 description="Advanced algorithms that learn and adapt to your needs"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.3s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Database}
                 title="Data Processing"
                 description="Real-time processing of large-scale datasets"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.4s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Code}
                 title="API Integration"
                 description="Seamless connection with your existing systems"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.5s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={LineChart}
                 title="Analytics"
                 description="Deep insights and predictive analysis"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.6s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Cloud}
                 title="Cloud Native"
                 description="Built for modern cloud infrastructure"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.7s" }}
+                onClick={() => handleNavigation('/platform')}
               />
               <FeatureCard
                 icon={Lock}
                 title="Security"
                 description="Enterprise-grade security and compliance"
-                className="fade-in"
+                className="fade-in cursor-pointer"
                 style={{ animationDelay: "0.8s" }}
+                onClick={() => handleNavigation('/platform')}
               />
             </div>
           </div>
@@ -94,9 +115,23 @@ const Features = () => {
               <p className="mb-8 text-lg text-muted-foreground slide-up">
                 Start your 14-day free trial and experience the power of AI
               </p>
-              <ButtonGradient size="lg" className="hover-lift glow slide-up">
-                Start Free Trial
-              </ButtonGradient>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <ButtonGradient 
+                  size="lg" 
+                  className="hover-lift glow slide-up" 
+                  onClick={() => handleNavigation('/pricing')}
+                >
+                  Start Free Trial
+                </ButtonGradient>
+                <ButtonGradient 
+                  size="lg" 
+                  variant="outline" 
+                  className="hover-lift slide-up"
+                  onClick={() => handleNavigation('/contact')}
+                >
+                  Contact Sales
+                </ButtonGradient>
+              </div>
             </div>
           </div>
         </section>
