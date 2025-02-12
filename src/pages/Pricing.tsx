@@ -1,16 +1,12 @@
 
-import { MainNav } from "@/components/main-nav";
+import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Check } from "lucide-react";
 
 const Pricing = () => {
   return (
     <div className="relative min-h-screen">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
-        <div className="container flex h-16 items-center">
-          <MainNav />
-        </div>
-      </header>
+      <EnhancedNav />
 
       <div className="pt-16">
         <section className="relative overflow-hidden py-24">

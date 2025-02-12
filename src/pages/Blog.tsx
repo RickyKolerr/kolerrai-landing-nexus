@@ -1,6 +1,5 @@
 
-import { MainNav } from "@/components/main-nav";
-import { PwaMenuBar } from "@/components/pwa-menu-bar";
+import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Search } from "lucide-react";
 
@@ -37,12 +36,8 @@ const Blog = () => {
   ];
 
   return (
-    <div className="relative min-h-screen pb-16 md:pb-0">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
-        <div className="container flex h-16 items-center">
-          <MainNav />
-        </div>
-      </header>
+    <div className="relative min-h-screen">
+      <EnhancedNav />
 
       <div className="pt-16">
         <section className="relative overflow-hidden py-24">
@@ -133,8 +128,6 @@ const Blog = () => {
           </div>
         </section>
       </div>
-
-      <PwaMenuBar />
     </div>
   );
 };
