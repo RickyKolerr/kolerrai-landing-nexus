@@ -1,19 +1,12 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { BrainCircuit, Bot, Cpu, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 
 const Products = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
 
   const handleNavigation = (path: string) => {
-    toast({
-      title: "Navigating...",
-      description: "Taking you to the product details",
-    });
     navigate(path);
   };
 

@@ -2,25 +2,16 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you shortly.",
-    });
+    // Form submission logic will be added later
   };
 
   const handleNavigation = (path: string) => {
-    toast({
-      title: "Navigating...",
-      description: "Taking you to explore more",
-    });
     navigate(path);
   };
 

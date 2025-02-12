@@ -1,20 +1,13 @@
-
 import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
 
   const handleNavigation = (path: string) => {
-    toast({
-      title: "Navigating...",
-      description: "Taking you to explore more",
-    });
     navigate(path);
   };
 
