@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import ResetPassword from "./pages/auth/ResetPassword";
+import Careers from "./pages/Careers";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/success" element={<Success />} />
           <Route path="/product/:id" element={<Platform />} />
           <Route path="/auth/sign-in" element={<SignIn />} />
