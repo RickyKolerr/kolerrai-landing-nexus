@@ -2,7 +2,7 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { BrainCircuit, Bot, Cpu, Database } from "lucide-react";
-import { FeatureCard } from "@/components/feature-card";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -46,7 +46,9 @@ const Products = () => {
                     <span>AI-powered Automation</span>
                   </li>
                 </ul>
-                <ButtonGradient className="w-full">Learn More</ButtonGradient>
+                <ButtonGradient asChild className="w-full">
+                  <Link to="/product/platform">Learn More</Link>
+                </ButtonGradient>
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
@@ -71,7 +73,9 @@ const Products = () => {
                     <span>Workflow Automation</span>
                   </li>
                 </ul>
-                <ButtonGradient className="w-full">Learn More</ButtonGradient>
+                <ButtonGradient asChild className="w-full">
+                  <Link to="/product/services">Learn More</Link>
+                </ButtonGradient>
               </div>
             </div>
           </div>
