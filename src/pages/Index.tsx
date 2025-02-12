@@ -363,11 +363,11 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+84 938 737 714</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>123 AI Valley, Silicon Valley, CA 94025</span>
+                <span>8th Floor, Nexus Tower, District 1, Ton Duc Thang St, Ho Chi Minh City</span>
               </div>
             </div>
 
