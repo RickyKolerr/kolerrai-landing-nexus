@@ -1,3 +1,4 @@
+
 import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart, Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
@@ -58,11 +59,13 @@ const Index = () => {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="text-center max-w-2xl mx-auto">
-              <img
-                src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
-                alt="Ricky Anh Nguyen"
-                className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-accent/20 hover-scale"
-              />
+              <div className="flex items-center justify-center mb-6">
+                <img
+                  src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
+                  alt="Ricky Anh Nguyen"
+                  className="w-40 h-40 rounded-full object-cover border-4 border-accent/20 hover-scale"
+                />
+              </div>
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
