@@ -14,6 +14,9 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
+import SignIn from "./pages/auth/SignIn";
+import SignUp from "./pages/auth/SignUp";
+import ResetPassword from "./pages/auth/ResetPassword";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +38,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/success" element={<Success />} />
           <Route path="/product/:id" element={<Platform />} />
+          <Route path="/auth/sign-in" element={<SignIn />} />
+          <Route path="/auth/sign-up" element={<SignUp />} />
+          <Route path="/auth/reset-password" element={<ResetPassword />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
