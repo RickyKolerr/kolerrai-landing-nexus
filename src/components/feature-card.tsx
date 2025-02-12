@@ -1,12 +1,14 @@
 
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
+import { CSSProperties } from "react";
 
 interface FeatureCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
   className?: string;
+  style?: CSSProperties;
 }
 
 export function FeatureCard({
@@ -14,6 +16,7 @@ export function FeatureCard({
   title,
   description,
   className,
+  style,
 }: FeatureCardProps) {
   return (
     <div
@@ -23,6 +26,7 @@ export function FeatureCard({
         "hover-lift glow card-shine",
         className
       )}
+      style={style}
     >
       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-6 w-6" />
