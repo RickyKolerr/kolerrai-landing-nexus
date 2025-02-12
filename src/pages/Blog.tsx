@@ -105,7 +105,7 @@ const Blog = () => {
                     <p className="text-muted-foreground mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <ButtonGradient variant="link" className="px-0 hover:no-underline">
+                    <ButtonGradient variant="outline" size="sm" className="px-0 hover:bg-transparent">
                       Read More →
                     </ButtonGradient>
                   </div>
