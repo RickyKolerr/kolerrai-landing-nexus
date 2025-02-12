@@ -1,4 +1,5 @@
-import { BrainCircuit, Rocket, Laptop, Shield } from "lucide-react";
+
+import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
 import { EnhancedNav } from "@/components/enhanced-nav";
@@ -20,15 +21,15 @@ const Index = () => {
                 className="h-20 mx-auto mb-8 hover-scale"
               />
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                The Future of AI-powered PaaS & SaaS Starts Here!
+                Powering the Future of PaaS & SaaS with AI-driven Innovation!
               </h1>
               <p className="mb-10 text-lg text-muted-foreground sm:text-xl slide-up" style={{ animationDelay: "0.2s" }}>
-                Advanced AI technology to optimize, automate, and scale businesses
+                Unlock the next level of cloud solutions with AI automation, scalability, and efficiency
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
                 <ButtonGradient size="lg" className="hover-lift glow">Start Free Trial</ButtonGradient>
                 <ButtonGradient size="lg" variant="outline" className="hover-lift">
-                  Watch Demo
+                  Explore Features
                 </ButtonGradient>
               </div>
             </div>
@@ -40,38 +41,83 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Why Kolerr?
+                Why KolerrAI?
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                Experience the power of next-generation AI technology
+                Next-generation AI solutions for modern enterprises
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureCard
                 icon={BrainCircuit}
-                title="AI Integration"
-                description="Powerful AI-driven solutions that adapt to your needs"
+                title="AI-Driven Cloud Solutions"
+                description="Automate & optimize business processes with intelligent workflows"
                 className="fade-in"
                 style={{ animationDelay: "0.1s" }}
               />
               <FeatureCard
                 icon={Rocket}
-                title="Performance"
-                description="Fast, lightweight, and infinitely scalable platform"
+                title="Scalable Infrastructure"
+                description="Flexible deployment solutions for businesses of all sizes"
                 className="fade-in"
                 style={{ animationDelay: "0.2s" }}
               />
               <FeatureCard
-                icon={Laptop}
-                title="PWA Ready"
-                description="Seamless experience across all your devices"
+                icon={Shield}
+                title="Enterprise Security"
+                description="Advanced protection & seamless operation guaranteed"
                 className="fade-in"
                 style={{ animationDelay: "0.3s" }}
               />
               <FeatureCard
-                icon={Shield}
-                title="Enterprise Security"
-                description="Bank-grade protection for your sensitive data"
+                icon={Laptop}
+                title="PWA Experience"
+                description="Access anywhere, anytime, on any device"
+                className="fade-in"
+                style={{ animationDelay: "0.4s" }}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="relative overflow-hidden py-24">
+          <div className="absolute inset-0 hero-gradient opacity-5" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="mb-16 text-center">
+              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
+                Core Features
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
+                Powerful tools for modern businesses
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <FeatureCard
+                icon={Cpu}
+                title="Smart AI Automation"
+                description="Reduce manual work with intelligent AI workflows"
+                className="fade-in"
+                style={{ animationDelay: "0.1s" }}
+              />
+              <FeatureCard
+                icon={Database}
+                title="Real-time Processing"
+                description="Make faster decisions with instant insights"
+                className="fade-in"
+                style={{ animationDelay: "0.2s" }}
+              />
+              <FeatureCard
+                icon={Code}
+                title="API Integration"
+                description="Easily connect with existing platforms"
+                className="fade-in"
+                style={{ animationDelay: "0.3s" }}
+              />
+              <FeatureCard
+                icon={LineChart}
+                title="Predictive Analytics"
+                description="AI-driven recommendations for growth"
                 className="fade-in"
                 style={{ animationDelay: "0.4s" }}
               />
@@ -85,7 +131,7 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Ready to Transform Your Business?
+                Experience AI-Powered PaaS & SaaS
               </h2>
               <p className="mb-8 text-lg text-muted-foreground slide-up" style={{ animationDelay: "0.2s" }}>
                 Start your 14-day free trial today. No credit card required.
