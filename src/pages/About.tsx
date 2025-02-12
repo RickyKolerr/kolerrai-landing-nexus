@@ -55,7 +55,7 @@ const About = () => {
                 {/* CEO Card */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png"
+                    src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
                     alt="Ricky Anh Nguyen"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />
