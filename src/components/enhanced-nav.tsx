@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { Menu, X, ChevronLeft, Home, LayoutGrid, Box, DollarSign, BookOpen, Mail } from "lucide-react";
+import { Menu, ChevronLeft, Home, LayoutGrid, Box, DollarSign, BookOpen, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ButtonGradient } from "./ui/button-gradient";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
