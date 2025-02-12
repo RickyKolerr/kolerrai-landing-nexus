@@ -1,4 +1,3 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Brain, Globe, Users, Trophy, Target, Rocket } from "lucide-react";
@@ -16,7 +15,6 @@ const About = () => {
           <div className="absolute inset-0 hero-gradient opacity-10" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
           <div className="relative mx-auto max-w-7xl px-6">
-            {/* Hero Section */}
             <div className="text-center mb-16">
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
                 Pioneering AI Innovation
@@ -26,7 +24,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Vision & Mission */}
             <div className="grid md:grid-cols-2 gap-8 mb-24">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                 <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -48,11 +45,9 @@ const About = () => {
               </div>
             </div>
 
-            {/* Leadership Section */}
             <div className="mb-24">
               <h2 className="text-3xl font-bold text-center mb-16">Our Leadership</h2>
               <div className="grid md:grid-cols-3 gap-8">
-                {/* CEO Card */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
                     src="/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
@@ -66,11 +61,9 @@ const About = () => {
                     driving innovation in the SaaS and PaaS industry.
                   </p>
                 </div>
-
-                {/* CTO Card */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="/placeholder.svg"
+                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
                     alt="David Chen"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />
@@ -81,11 +74,9 @@ const About = () => {
                     and machine learning systems.
                   </p>
                 </div>
-
-                {/* COO Card */}
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
                   <img
-                    src="/placeholder.svg"
+                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
                     alt="Sarah Mitchell"
                     className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
                   />
@@ -99,7 +90,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Company Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient mb-2">1M+</div>
@@ -119,7 +109,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Core Values */}
             <div className="mb-24">
               <h2 className="text-3xl font-bold text-center mb-16">Our Core Values</h2>
               <div className="grid md:grid-cols-3 gap-8">
@@ -147,7 +136,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* CTA Section */}
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-8">Ready to Transform Your Business?</h2>
               <div className="flex flex-wrap gap-4 justify-center">
