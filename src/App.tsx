@@ -13,12 +13,16 @@ import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Security from "./pages/Security";
+import Compliance from "./pages/Compliance";
 import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import ResetPassword from "./pages/auth/ResetPassword";
-import Careers from "./pages/Careers";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +44,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/compliance" element={<Compliance />} />
           <Route path="/success" element={<Success />} />
           <Route path="/product/:id" element={<Platform />} />
           <Route path="/auth/sign-in" element={<SignIn />} />
