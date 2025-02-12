@@ -2,9 +2,11 @@
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { BrainCircuit, Bot, Cpu, Database } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -46,8 +48,11 @@ const Products = () => {
                     <span>AI-powered Automation</span>
                   </li>
                 </ul>
-                <ButtonGradient asChild className="w-full">
-                  <Link to="/product/platform">Learn More</Link>
+                <ButtonGradient 
+                  className="w-full"
+                  onClick={() => navigate('/product/platform')}
+                >
+                  Learn More
                 </ButtonGradient>
               </div>
 
@@ -73,8 +78,11 @@ const Products = () => {
                     <span>Workflow Automation</span>
                   </li>
                 </ul>
-                <ButtonGradient asChild className="w-full">
-                  <Link to="/product/services">Learn More</Link>
+                <ButtonGradient 
+                  className="w-full"
+                  onClick={() => navigate('/product/services')}
+                >
+                  Learn More
                 </ButtonGradient>
               </div>
             </div>
