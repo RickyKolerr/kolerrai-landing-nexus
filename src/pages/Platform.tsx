@@ -1,3 +1,4 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Cpu, Shield, Zap, Cloud, LineChart, Code } from "lucide-react";
@@ -13,33 +14,33 @@ const Platform = () => {
   const features = [
     {
       icon: Cpu,
-      title: "AI Core Engine",
-      description: "Powerful machine learning algorithms that adapt and learn from your data in real-time."
+      title: "Intelligent Process Automation",
+      description: "Built-in AI capabilities that automate complex workflows and optimize business processes automatically."
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-grade encryption and security measures to protect your sensitive data."
+      description: "SOC 2 Type II certified platform with advanced encryption and security measures."
     },
     {
       icon: Zap,
-      title: "Real-time Processing",
-      description: "Process and analyze data instantly with our high-performance infrastructure."
+      title: "Smart Optimization",
+      description: "AI-driven optimization that continuously improves your business processes and workflows."
     },
     {
       icon: Cloud,
-      title: "Cloud Native",
-      description: "Built for modern cloud infrastructure with seamless scalability."
+      title: "Seamless Integration",
+      description: "Easy integration with your existing business tools and systems through our platform."
     },
     {
       icon: LineChart,
-      title: "Advanced Analytics",
-      description: "Deep insights and predictive analytics to drive better business decisions."
+      title: "Business Intelligence",
+      description: "Real-time analytics and AI-powered insights to drive better business decisions."
     },
     {
       icon: Code,
-      title: "API Integration",
-      description: "Easy integration with your existing systems through our comprehensive API."
+      title: "Extensible Platform",
+      description: "Customize and extend platform capabilities through our comprehensive API."
     }
   ];
 
@@ -57,7 +58,7 @@ const Platform = () => {
                 Our Platform
               </h1>
               <p className="text-lg text-muted-foreground sm:text-xl mb-8 slide-up">
-                A comprehensive AI platform built for enterprise scale
+                A comprehensive SaaS/PaaS solution with integrated AI capabilities
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <ButtonGradient 
@@ -77,7 +78,6 @@ const Platform = () => {
               </div>
             </div>
 
-            {/* Platform Features */}
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
                 <div 
@@ -95,12 +95,11 @@ const Platform = () => {
               ))}
             </div>
 
-            {/* Technical Specs */}
             <div className="mt-24">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Technical Specifications</h2>
+                <h2 className="text-3xl font-bold mb-4">Platform Capabilities</h2>
                 <p className="text-muted-foreground">
-                  Built with cutting-edge technology for maximum performance
+                  Enterprise-grade infrastructure with integrated AI
                 </p>
               </div>
               <div className="grid gap-8 md:grid-cols-2">
@@ -109,15 +108,15 @@ const Platform = () => {
                   <ul className="space-y-4">
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>99.99% uptime guarantee</span>
+                      <span>High-availability platform (99.99% uptime)</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Sub-millisecond response times</span>
+                      <span>Real-time process optimization</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Global CDN distribution</span>
+                      <span>Global edge deployment</span>
                     </li>
                   </ul>
                 </div>
@@ -130,22 +129,21 @@ const Platform = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>End-to-end encryption</span>
+                      <span>Enterprise-grade encryption</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>GDPR compliant</span>
+                      <span>Comprehensive compliance suite</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Bottom CTA */}
             <div className="mt-24 text-center">
               <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
               <p className="text-muted-foreground mb-8">
-                Join thousands of businesses transforming their operations with KolerrAI
+                Join leading businesses transforming their operations with our intelligent platform
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <ButtonGradient 

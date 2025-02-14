@@ -1,3 +1,4 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Brain, Globe, Users, Trophy, Target, Rocket } from "lucide-react";
@@ -17,10 +18,10 @@ const About = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="text-center mb-16">
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Pioneering AI Innovation
+                Leading the SaaS & PaaS Evolution
               </h1>
               <p className="text-lg text-muted-foreground sm:text-xl slide-up max-w-3xl mx-auto">
-                Building the future of AI-powered solutions for businesses worldwide
+                Empowering businesses with intelligent platforms that seamlessly integrate AI into everyday operations
               </p>
             </div>
 
@@ -31,7 +32,7 @@ const About = () => {
                   Our Vision
                 </h2>
                 <p className="text-muted-foreground">
-                  To revolutionize business operations through cutting-edge AI solutions, making advanced technology accessible to companies of all sizes.
+                  To make AI-powered process automation and optimization accessible through intuitive SaaS and PaaS solutions that transform how businesses operate.
                 </p>
               </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
@@ -40,7 +41,7 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground">
-                  To empower businesses with innovative AI tools and platforms that drive growth, efficiency, and digital transformation.
+                  To deliver platforms that seamlessly integrate AI capabilities into business workflows, enabling companies to achieve operational excellence without complex technical implementations.
                 </p>
               </div>
             </div>
@@ -57,8 +58,8 @@ const About = () => {
                   <h3 className="text-xl font-bold mb-2">Ricky Anh Nguyen</h3>
                   <p className="text-accent mb-4">CEO & Founder</p>
                   <p className="text-muted-foreground text-sm">
-                    A visionary leader with extensive experience in AI and cloud computing, 
-                    driving innovation in the SaaS and PaaS industry.
+                    A pioneering leader in SaaS/PaaS development with extensive experience in 
+                    building AI-integrated business platforms that drive digital transformation.
                   </p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
@@ -70,8 +71,8 @@ const About = () => {
                   <h3 className="text-xl font-bold mb-2">David Chen</h3>
                   <p className="text-accent mb-4">Chief Technology Officer</p>
                   <p className="text-muted-foreground text-sm">
-                    An AI expert with a proven track record in developing scalable cloud solutions 
-                    and machine learning systems.
+                    An expert in platform architecture and AI integration, focusing on building 
+                    scalable SaaS solutions that deliver measurable business value.
                   </p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift text-center">
@@ -83,8 +84,8 @@ const About = () => {
                   <h3 className="text-xl font-bold mb-2">Sarah Mitchell</h3>
                   <p className="text-accent mb-4">Chief Operating Officer</p>
                   <p className="text-muted-foreground text-sm">
-                    A strategic leader focused on scaling operations and delivering 
-                    exceptional client experiences.
+                    A strategic leader focused on optimizing platform delivery and ensuring 
+                    exceptional client success in their digital transformation journey.
                   </p>
                 </div>
               </div>
@@ -93,19 +94,19 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient mb-2">1M+</div>
-                <p className="text-muted-foreground">API Calls Daily</p>
+                <p className="text-muted-foreground">Daily Platform Interactions</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient mb-2">500+</div>
-                <p className="text-muted-foreground">Enterprise Clients</p>
+                <p className="text-muted-foreground">Active Platform Users</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient mb-2">50+</div>
-                <p className="text-muted-foreground">Countries Served</p>
+                <p className="text-muted-foreground">Integrated Solutions</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
-                <p className="text-muted-foreground">Uptime SLA</p>
+                <p className="text-muted-foreground">Platform Uptime</p>
               </div>
             </div>
 
@@ -114,23 +115,23 @@ const About = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <Brain className="h-12 w-12 text-accent mb-4" />
-                  <h3 className="text-xl font-bold mb-4">Innovation First</h3>
+                  <h3 className="text-xl font-bold mb-4">Platform Innovation</h3>
                   <p className="text-muted-foreground">
-                    Constantly pushing boundaries in AI technology to deliver cutting-edge solutions.
+                    Continuously enhancing our platforms with cutting-edge AI capabilities to solve real business challenges.
                   </p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <Globe className="h-12 w-12 text-accent mb-4" />
-                  <h3 className="text-xl font-bold mb-4">Global Impact</h3>
+                  <h3 className="text-xl font-bold mb-4">Seamless Integration</h3>
                   <p className="text-muted-foreground">
-                    Creating solutions that transform businesses across borders and cultures.
+                    Building platforms that work harmoniously with existing business systems and workflows.
                   </p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
                   <Users className="h-12 w-12 text-accent mb-4" />
                   <h3 className="text-xl font-bold mb-4">Client Success</h3>
                   <p className="text-muted-foreground">
-                    Dedicated to helping our clients achieve their business objectives through AI.
+                    Ensuring our platforms deliver measurable value and drive real business transformation.
                   </p>
                 </div>
               </div>
@@ -144,7 +145,7 @@ const About = () => {
                   className="hover-lift glow"
                   onClick={() => navigate('/contact')}
                 >
-                  Contact Us
+                  Schedule Demo
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg"

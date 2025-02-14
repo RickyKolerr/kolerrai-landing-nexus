@@ -1,4 +1,3 @@
-
 import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart, Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
@@ -29,26 +28,26 @@ const Index = () => {
                 className="h-20 mx-auto mb-8 hover-scale"
               />
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Powering the Future of PaaS & SaaS with AI-driven Innovation!
+                Transform Your Business with AI-Powered SaaS & PaaS Solutions
               </h1>
               <p className="mb-10 text-lg text-muted-foreground sm:text-xl slide-up" style={{ animationDelay: "0.2s" }}>
-                Unlock the next level of cloud solutions with AI automation, scalability, and efficiency
+                Streamline operations and boost productivity with our intelligent platforms that seamlessly integrate AI into your business processes
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
                 <ButtonGradient 
                   size="lg" 
                   className="hover-lift glow"
-                  onClick={() => handleNavigation('/pricing')}
+                  onClick={() => handleNavigation('/platform')}
                 >
-                  Start Free Trial
+                  Explore Platform
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg" 
                   variant="outline" 
                   className="hover-lift"
-                  onClick={() => handleNavigation('/features')}
+                  onClick={() => handleNavigation('/pricing')}
                 >
-                  Explore Features
+                  View Pricing
                 </ButtonGradient>
               </div>
             </div>
@@ -69,7 +68,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "Our mission is to democratize AI technology, making enterprise-grade solutions accessible to businesses of all sizes. Together, we're building the future of cloud computing."
+                "We're revolutionizing how businesses adopt AI by integrating it directly into our SaaS and PaaS solutions. Our platforms make advanced automation and optimization accessible to companies of all sizes, without the complexity of building custom AI systems."
               </p>
             </div>
           </div>
@@ -80,83 +79,38 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Why KolerrAI?
+                Why Choose Our Platform?
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                Next-generation AI solutions for modern enterprises
+                Comprehensive SaaS and PaaS solutions with built-in AI capabilities
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureCard
                 icon={BrainCircuit}
-                title="AI-Driven Cloud Solutions"
-                description="Automate & optimize business processes with intelligent workflows"
+                title="Integrated AI Automation"
+                description="Pre-built AI workflows that automate your business processes right out of the box"
                 className="fade-in"
                 style={{ animationDelay: "0.1s" }}
               />
               <FeatureCard
                 icon={Rocket}
-                title="Scalable Infrastructure"
-                description="Flexible deployment solutions for businesses of all sizes"
+                title="Rapid Deployment"
+                description="Deploy AI-enhanced solutions in days, not months, with our platform"
                 className="fade-in"
                 style={{ animationDelay: "0.2s" }}
               />
               <FeatureCard
                 icon={Shield}
-                title="Enterprise Security"
-                description="Advanced protection & seamless operation guaranteed"
+                title="Enterprise-Ready"
+                description="Secure, scalable platforms built for business-critical operations"
                 className="fade-in"
                 style={{ animationDelay: "0.3s" }}
               />
               <FeatureCard
                 icon={Laptop}
-                title="PWA Experience"
-                description="Access anywhere, anytime, on any device"
-                className="fade-in"
-                style={{ animationDelay: "0.4s" }}
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden py-24">
-          <div className="absolute inset-0 hero-gradient opacity-5" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="mb-16 text-center">
-              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Core Features
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                Powerful tools for modern businesses
-              </p>
-            </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              <FeatureCard
-                icon={Cpu}
-                title="Smart AI Automation"
-                description="Reduce manual work with intelligent AI workflows"
-                className="fade-in"
-                style={{ animationDelay: "0.1s" }}
-              />
-              <FeatureCard
-                icon={Database}
-                title="Real-time Processing"
-                description="Make faster decisions with instant insights"
-                className="fade-in"
-                style={{ animationDelay: "0.2s" }}
-              />
-              <FeatureCard
-                icon={Code}
-                title="API Integration"
-                description="Easily connect with existing platforms"
-                className="fade-in"
-                style={{ animationDelay: "0.3s" }}
-              />
-              <FeatureCard
-                icon={LineChart}
-                title="Predictive Analytics"
-                description="AI-driven recommendations for growth"
+                title="No-Code Integration"
+                description="Easily connect our platforms with your existing business tools"
                 className="fade-in"
                 style={{ animationDelay: "0.4s" }}
               />
@@ -170,28 +124,25 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Experience AI-Powered PaaS & SaaS
+                Ready to Modernize Your Business?
               </h2>
-              <p className="mb-8 text-lg text-muted-foreground slide-up" style={{ animationDelay: "0.2s" }}>
-                Start your 14-day free trial today. No credit card required.
+              <p className="mb-8 text-lg text-muted-foreground slide-up">
+                Join hundreds of businesses using our SaaS and PaaS platforms to automate and optimize their operations
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <ButtonGradient 
                   size="lg" 
-                  className="hover-lift glow slide-up" 
-                  style={{ animationDelay: "0.4s" }}
-                  onClick={() => handleNavigation('/pricing')}
+                  className="hover-lift glow"
+                  onClick={() => handleNavigation('/platform')}
                 >
-                  Try for Free - 14 Days
+                  Start Free Trial
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg" 
-                  variant="outline" 
-                  className="hover-lift slide-up" 
-                  style={{ animationDelay: "0.4s" }}
+                  variant="outline"
                   onClick={() => handleNavigation('/contact')}
                 >
-                  Contact Sales
+                  Schedule Demo
                 </ButtonGradient>
               </div>
             </div>
