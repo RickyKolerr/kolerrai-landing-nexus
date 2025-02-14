@@ -3,8 +3,8 @@ import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
   BrainCircuit, Bot, Cpu, Database, Video, BookOpen, Shield, Gift, Award,
-  MessageCircle, FileContract, CreditCard, BarChart, Upload, Headphones,
-  Share2, FileText, Users, Clock, Bell, Lock, ChartLine
+  MessageCircle, FileText, CreditCard, BarChart, Upload, Headphones,
+  Share2, Users, Clock, Bell, Lock, ChartLine
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,7 +70,7 @@ const Products = () => {
                     </Card>
                     <Card className="bg-white/5 border-accent/10">
                       <CardHeader>
-                        <FileContract className="h-5 w-5 text-accent mb-2" />
+                        <FileText className="h-5 w-5 text-accent mb-2" />
                         <CardTitle>Contract Management</CardTitle>
                         <CardDescription>Digital contract creation and signing</CardDescription>
                       </CardHeader>
