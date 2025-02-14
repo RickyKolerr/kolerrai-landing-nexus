@@ -72,7 +72,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "We specialize in building customizable SaaS and PaaS platforms that make AI adoption simple and practical. Our solutions enable businesses to automate processes, reduce manual labor, and achieve significant cost savings without the complexity of developing custom AI systems."
+                "We specialize in building flexible, customizable SaaS and PaaS platforms that integrate AI to streamline business operations, automate tasks, and reduce manual effort. Our solutions empower businesses to optimize processes and achieve substantial cost savings, all without the complexity of developing custom AI systems."
               </p>
             </div>
           </div>
