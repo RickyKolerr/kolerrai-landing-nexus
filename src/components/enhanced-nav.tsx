@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { Menu, ChevronLeft, Home, Box, Cpu, Mail } from "lucide-react";
+import { Menu, ChevronLeft, Home, Box, Cpu, Mail, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ButtonGradient } from "./ui/button-gradient";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -16,6 +16,7 @@ export function EnhancedNav() {
     { icon: Home, label: "Home", path: "/" },
     { icon: Box, label: "Products", path: "/products" },
     { icon: Cpu, label: "Platform", path: "/platform" },
+    { icon: DollarSign, label: "Pricing", path: "/pricing" },
     { icon: Mail, label: "Contact", path: "/contact" },
   ];
 
