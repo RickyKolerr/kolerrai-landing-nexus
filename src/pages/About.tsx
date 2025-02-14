@@ -32,7 +32,7 @@ const About = () => {
                   Our Vision
                 </h2>
                 <p className="text-muted-foreground">
-                  To make AI-powered process automation and optimization accessible through intuitive SaaS and PaaS solutions that transform how businesses operate.
+                  To be the global leader in delivering future-proof AI solutions that empower businesses to thrive in the digital age. We envision a world where every organization can harness the power of artificial intelligence through scalable, secure, and efficient platforms that drive continuous innovation and sustainable growth.
                 </p>
               </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
@@ -41,7 +41,7 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground">
-                  To deliver platforms that seamlessly integrate AI capabilities into business workflows, enabling companies to achieve operational excellence without complex technical implementations.
+                  To empower businesses through custom-built platforms that seamlessly integrate AI capabilities, automation, and intelligent workflows. We are committed to delivering measurable business value by optimizing processes, accelerating digital transformation, and providing scalable solutions that help our clients stay competitive in an ever-evolving technological landscape.
                 </p>
               </div>
             </div>
