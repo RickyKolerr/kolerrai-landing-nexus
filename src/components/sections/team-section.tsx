@@ -5,19 +5,19 @@ import { Users } from "lucide-react";
 export const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Peter Nguyen",
+      name: "Ricky Anh Nguyen",
       role: "Chief Executive Officer",
       description: "Visionary leader driving KolerrAI's mission to revolutionize AI solutions. Focused on strategic growth and innovation in the AI industry.",
       imageUrl: "/lovable-uploads/99c4eb06-a618-421b-a272-81e310d4431d.png"
     },
     {
-      name: "Huy",
+      name: "Tony Nguyen",
       role: "Chief Technology Officer",
       description: "Leading our technology vision and driving innovation in AI solutions development. Expert in platform architecture and cutting-edge tech implementation.",
       imageUrl: "/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png"
     },
     {
-      name: "Đạt",
+      name: "Dat Nguyen",
       role: "Chief Operating Officer",
       description: "Orchestrating operational excellence and ensuring seamless delivery of our AI solutions. Focused on scaling our platform capabilities and client success.",
       imageUrl: "/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
