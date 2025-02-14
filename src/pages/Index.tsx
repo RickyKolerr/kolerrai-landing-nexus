@@ -1,3 +1,4 @@
+
 import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart, Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
@@ -28,10 +29,13 @@ const Index = () => {
                 className="h-20 mx-auto mb-8 hover-scale"
               />
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Transform Your Business with AI-Powered SaaS & PaaS Solutions
+                Customizable SaaS & PaaS Platforms with Built-in AI Capabilities
               </h1>
+              <p className="text-xl text-accent font-semibold mb-6 slide-up" style={{ animationDelay: "0.1s" }}>
+                Empowering businesses with AI-driven solutions for smarter, more efficient operations
+              </p>
               <p className="mb-10 text-lg text-muted-foreground sm:text-xl slide-up" style={{ animationDelay: "0.2s" }}>
-                Streamline operations and boost productivity with our intelligent platforms that seamlessly integrate AI into your business processes
+                Build, deploy, and scale AI-powered business platforms that automate processes, reduce costs, and drive operational excellence—without the complexity
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
                 <ButtonGradient 
@@ -68,7 +72,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "We're revolutionizing how businesses adopt AI by integrating it directly into our SaaS and PaaS solutions. Our platforms make advanced automation and optimization accessible to companies of all sizes, without the complexity of building custom AI systems."
+                "We specialize in building customizable SaaS and PaaS platforms that make AI adoption simple and practical. Our solutions enable businesses to automate processes, reduce manual labor, and achieve significant cost savings without the complexity of developing custom AI systems."
               </p>
             </div>
           </div>
@@ -79,41 +83,65 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Why Choose Our Platform?
+                Platform Benefits
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                Comprehensive SaaS and PaaS solutions with built-in AI capabilities
+                Experience the power of AI-driven automation in your daily operations
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureCard
                 icon={BrainCircuit}
-                title="Integrated AI Automation"
-                description="Pre-built AI workflows that automate your business processes right out of the box"
+                title="Process Automation"
+                description="Reduce manual tasks by up to 80% with AI-powered workflows built into our platforms"
                 className="fade-in"
                 style={{ animationDelay: "0.1s" }}
               />
               <FeatureCard
                 icon={Rocket}
-                title="Rapid Deployment"
-                description="Deploy AI-enhanced solutions in days, not months, with our platform"
+                title="Cost Efficiency"
+                description="Cut operational costs by 40-60% through automated processes and optimized workflows"
                 className="fade-in"
                 style={{ animationDelay: "0.2s" }}
               />
               <FeatureCard
                 icon={Shield}
-                title="Enterprise-Ready"
-                description="Secure, scalable platforms built for business-critical operations"
+                title="Easy Integration"
+                description="Deploy and integrate with your existing systems in days, not months"
                 className="fade-in"
                 style={{ animationDelay: "0.3s" }}
               />
               <FeatureCard
                 icon={Laptop}
-                title="No-Code Integration"
-                description="Easily connect our platforms with your existing business tools"
+                title="Immediate ROI"
+                description="See tangible results within weeks through reduced labor costs and improved efficiency"
                 className="fade-in"
                 style={{ animationDelay: "0.4s" }}
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="relative overflow-hidden bg-secondary/30 py-24">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gradient mb-2">60%</div>
+                <p className="text-muted-foreground">Average Cost Reduction</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gradient mb-2">80%</div>
+                <p className="text-muted-foreground">Process Automation</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gradient mb-2">500+</div>
+                <p className="text-muted-foreground">Platform Deployments</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
+                <p className="text-muted-foreground">Platform Uptime</p>
+              </div>
             </div>
           </div>
         </section>
@@ -124,10 +152,10 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Ready to Modernize Your Business?
+                Ready to Transform Your Operations?
               </h2>
               <p className="mb-8 text-lg text-muted-foreground slide-up">
-                Join hundreds of businesses using our SaaS and PaaS platforms to automate and optimize their operations
+                Join industry leaders who are achieving operational excellence with our AI-powered platforms
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <ButtonGradient 
