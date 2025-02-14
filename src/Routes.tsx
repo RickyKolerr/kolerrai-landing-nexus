@@ -21,6 +21,10 @@ import Privacy from "@/pages/Privacy";
 import Security from "@/pages/Security";
 import Success from "@/pages/Success";
 
+// Platform pages
+import Automation from "@/pages/platform/Automation";
+import Campaigns from "@/pages/platform/Campaigns";
+
 const Routes = () => {
   return (
     <RouterRoutes>
@@ -45,6 +49,10 @@ const Routes = () => {
       <Route path="/products/kolerr-platform" element={<KolerrPlatform />} />
       <Route path="/products/audiovable" element={<Audiovable />} />
       <Route path="/products/kiddoai" element={<KiddOAi />} />
+      
+      {/* Platform specific routes */}
+      <Route path="/platform/automation" element={<Automation />} />
+      <Route path="/platform/campaigns" element={<Campaigns />} />
       
       <Route path="*" element={<NotFound />} />
     </RouterRoutes>
