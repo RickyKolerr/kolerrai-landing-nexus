@@ -1,8 +1,10 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
+import { FeatureCard } from "@/components/feature-card";
 import { 
   Cpu, Shield, Zap, Cloud, LineChart, Code, 
-  ArrowRight, Users, Book, Rocket, MessageSquare,
+  ArrowRight, Book, Rocket, MessageSquare,
   Globe, Award, HeartHandshake, ChevronRight
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -10,47 +12,49 @@ import { useNavigate } from "react-router-dom";
 const Platform = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
-  };
-
   const features = [
     {
       icon: Cpu,
-      title: "Intelligent Process Automation",
-      description: "Built-in AI capabilities that automate complex workflows and optimize business processes automatically."
+      title: "AI Automation",
+      description: "Built-in AI capabilities that automate complex workflows",
+      path: "/platform/automation"
+    },
+    {
+      icon: LineChart,
+      title: "Campaign Management",
+      description: "Smart campaign optimization and audience targeting",
+      path: "/platform/campaigns"
+    },
+    {
+      icon: Cloud,
+      title: "Analytics Dashboard",
+      description: "Real-time insights and performance tracking",
+      path: "/platform/analytics"
+    },
+    {
+      icon: Code,
+      title: "Integration Hub",
+      description: "Connect with your favorite tools seamlessly",
+      path: "/platform/integrations"
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "SOC 2 Type II certified platform with advanced encryption and security measures."
+      description: "SOC 2 Type II certified with advanced encryption",
+      path: "/security"
     },
     {
       icon: Zap,
       title: "Smart Optimization",
-      description: "AI-driven optimization that continuously improves your business processes and workflows."
-    },
-    {
-      icon: Cloud,
-      title: "Seamless Integration",
-      description: "Easy integration with your existing business tools and systems through our platform."
-    },
-    {
-      icon: LineChart,
-      title: "Business Intelligence",
-      description: "Real-time analytics and AI-powered insights to drive better business decisions."
-    },
-    {
-      icon: Code,
-      title: "Extensible Platform",
-      description: "Customize and extend platform capabilities through our comprehensive API."
+      description: "AI-driven optimization for maximum efficiency",
+      path: "/platform/automation"
     }
   ];
 
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
-
+      
       <div className="pt-16">
         <section className="relative overflow-hidden py-24">
           <div className="absolute inset-0 hero-gradient opacity-10" />
@@ -58,238 +62,122 @@ const Platform = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="text-center mb-16">
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Our Platform
+                Platform Features
               </h1>
-              <p className="text-lg text-muted-foreground sm:text-xl mb-8 slide-up">
-                A comprehensive SaaS/PaaS solution with integrated AI capabilities
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground mb-8 slide-up">
+                A comprehensive suite of AI-powered tools to transform your business
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <ButtonGradient 
                   size="lg" 
                   className="hover-lift glow"
-                  onClick={() => handleNavigation('/pricing')}
+                  onClick={() => navigate('/contact')}
                 >
-                  Start Free Trial
+                  Schedule Demo
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg" 
                   variant="outline"
-                  onClick={() => handleNavigation('/contact')}
+                  onClick={() => navigate('/pricing')}
                 >
-                  View Documentation
+                  View Pricing
                 </ButtonGradient>
               </div>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
-                <div 
+                <FeatureCard
                   key={feature.title}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift cursor-pointer"
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  className="fade-in cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
-                  onClick={() => handleNavigation(`/product/${feature.title.toLowerCase().replace(/\s+/g, '-')}`)}
-                >
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6">
-                    <feature.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </div>
+                  onClick={() => navigate(feature.path)}
+                />
               ))}
             </div>
 
             <div className="mt-24">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4">Platform Capabilities</h2>
-                <p className="text-muted-foreground">
-                  Enterprise-grade infrastructure with integrated AI
+                <h2 className="text-3xl font-bold mb-4">Enterprise Features</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Built for scale with enterprise-grade security and performance
                 </p>
               </div>
+              
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10">
-                  <h3 className="text-2xl font-semibold mb-4">Performance</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Security & Compliance</h3>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>High-availability platform (99.99% uptime)</span>
+                      <Shield className="w-5 h-5 text-accent" />
+                      <span>SOC 2 Type II Certified</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Real-time process optimization</span>
+                      <Lock className="w-5 h-5 text-accent" />
+                      <span>Enterprise-grade Encryption</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Global edge deployment</span>
+                      <Shield className="w-5 h-5 text-accent" />
+                      <span>GDPR Compliant</span>
                     </li>
                   </ul>
                 </div>
+                
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10">
-                  <h3 className="text-2xl font-semibold mb-4">Security</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Global Infrastructure</h3>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>SOC 2 Type II certified</span>
+                      <Globe className="w-5 h-5 text-accent" />
+                      <span>Global Edge Network</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Enterprise-grade encryption</span>
+                      <Cloud className="w-5 h-5 text-accent" />
+                      <span>Multi-region Deployment</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full bg-accent" />
-                      <span>Comprehensive compliance suite</span>
+                      <Zap className="w-5 h-5 text-accent" />
+                      <span>Automatic Scaling</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="mt-24 text-center">
-              <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
-              <p className="text-muted-foreground mb-8">
-                Join leading businesses transforming their operations with our intelligent platform
+        <section className="relative overflow-hidden py-24 bg-secondary/30">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
+                Ready to Get Started?
+              </h2>
+              <p className="mb-8 text-lg text-muted-foreground">
+                Join leading businesses transforming their operations with our platform
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <ButtonGradient 
                   size="lg" 
-                  className="hover-lift glow"
-                  onClick={() => handleNavigation('/pricing')}
+                  className="hover-lift glow" 
+                  onClick={() => navigate('/contact')}
                 >
-                  Start Free Trial
+                  Schedule Demo
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg" 
                   variant="outline"
-                  onClick={() => handleNavigation('/contact')}
+                  onClick={() => navigate('/pricing')}
                 >
-                  Schedule Demo
+                  View Pricing
                 </ButtonGradient>
               </div>
             </div>
           </div>
         </section>
       </div>
-
-      <main className="mt-24">
-        <div className="relative">
-          <footer className="mt-32 border-t border-white/10">
-            <div className="grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Platform</h3>
-                <ul className="space-y-3">
-                  {[
-                    { label: "AI Automation", path: "/platform/automation" },
-                    { label: "Campaign Management", path: "/platform/campaigns" },
-                    { label: "Analytics Dashboard", path: "/platform/analytics" },
-                    { label: "Integration Hub", path: "/platform/integrations" },
-                    { label: "API Documentation", path: "/docs/api" }
-                  ].map((item) => (
-                    <li key={item.label}>
-                      <button 
-                        onClick={() => navigate(item.path)}
-                        className="flex items-center text-white/70 hover:text-white transition-colors group"
-                      >
-                        <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Solutions</h3>
-                <ul className="space-y-3">
-                  {[
-                    { label: "Enterprise Suite", icon: Rocket, path: "/solutions/enterprise" },
-                    { label: "Agency Tools", icon: Users, path: "/solutions/agency" },
-                    { label: "Developer Resources", icon: Code, path: "/solutions/developers" },
-                    { label: "Success Stories", icon: Award, path: "/case-studies" }
-                  ].map((item) => (
-                    <li key={item.label}>
-                      <button 
-                        onClick={() => navigate(item.path)}
-                        className="flex items-center text-white/70 hover:text-white transition-colors"
-                      >
-                        <item.icon className="w-4 h-4 mr-2" />
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Resources</h3>
-                <ul className="space-y-3">
-                  {[
-                    { label: "Documentation", icon: Book, path: "/docs" },
-                    { label: "Learning Center", icon: Globe, path: "/learn" },
-                    { label: "Community", icon: MessageSquare, path: "/community" },
-                    { label: "Partner Program", icon: HeartHandshake, path: "/partners" }
-                  ].map((item) => (
-                    <li key={item.label}>
-                      <button 
-                        onClick={() => navigate(item.path)}
-                        className="flex items-center text-white/70 hover:text-white transition-colors"
-                      >
-                        <item.icon className="w-4 h-4 mr-2" />
-                        {item.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Get Started</h3>
-                <div className="space-y-4">
-                  <ButtonGradient 
-                    onClick={() => navigate('/contact')}
-                    className="w-full justify-between"
-                  >
-                    Schedule Demo
-                    <ArrowRight className="w-4 h-4" />
-                  </ButtonGradient>
-                  <ButtonGradient 
-                    variant="outline"
-                    onClick={() => navigate('/pricing')}
-                    className="w-full justify-between"
-                  >
-                    View Pricing
-                    <ArrowRight className="w-4 h-4" />
-                  </ButtonGradient>
-                  <p className="text-sm text-white/70">
-                    Experience the power of AI-driven automation and smart campaign management.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="py-6 border-t border-white/10">
-              <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-                <p className="text-sm text-white/70">
-                  © 2024 Kolerr Technologies. All rights reserved.
-                </p>
-                <div className="flex gap-6">
-                  {[
-                    { label: "Terms", path: "/terms" },
-                    { label: "Privacy", path: "/privacy" },
-                    { label: "Security", path: "/security" }
-                  ].map((item) => (
-                    <button
-                      key={item.label}
-                      onClick={() => navigate(item.path)}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </main>
     </div>
   );
 };
