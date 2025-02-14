@@ -22,12 +22,11 @@ const Products = () => {
 
       <div className="pt-16">
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 hero-gradient opacity-10" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
           <div className="relative mx-auto max-w-7xl px-6 py-24">
             {/* Hero Section */}
             <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 text-accent mb-6">
                 <Sparkles className="h-4 w-4" />
                 <span className="text-sm font-medium">Discover Our Solutions</span>
               </div>
@@ -41,154 +40,115 @@ const Products = () => {
 
             <div className="space-y-24">
               {/* Kolerr Platform */}
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 hover-lift card-shine">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div>
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6 transition-transform duration-300 group-hover:scale-110">
-                      <BrainCircuit className="h-6 w-6" />
+              <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-accent/5 via-background to-primary/5 p-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
+                  <div className="grid gap-8 md:grid-cols-2">
+                    <div>
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-primary mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                        <BrainCircuit className="h-6 w-6 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-semibold mb-4">Kolerr Platform</h2>
+                      <p className="text-muted-foreground mb-6 text-lg">
+                        An AI-powered platform revolutionizing collaboration between KOLs and brands through smart matchmaking and comprehensive campaign management.
+                      </p>
+                      <ButtonGradient 
+                        onClick={() => handleNavigation('/products/kolerr-platform')}
+                        className="mb-6"
+                      >
+                        Explore Platform
+                      </ButtonGradient>
                     </div>
-                    <h2 className="text-3xl font-semibold mb-4">Kolerr Platform</h2>
-                    <p className="text-muted-foreground mb-6 text-lg">
-                      An AI-powered platform revolutionizing collaboration between KOLs and brands through smart matchmaking and comprehensive campaign management.
-                    </p>
-                    <ButtonGradient 
-                      onClick={() => handleNavigation('/products/kolerr-platform')}
-                      className="mb-6 group-hover:shadow-lg transition-shadow duration-300"
-                    >
-                      Explore Platform
-                    </ButtonGradient>
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Bot className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>AI Matchmaking</CardTitle>
-                        <CardDescription>Smart partner matching based on campaign needs</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <MessageCircle className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Real-time Chat</CardTitle>
-                        <CardDescription>Seamless communication between parties</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <FileText className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Contract Management</CardTitle>
-                        <CardDescription>Digital contract creation and signing</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <BarChart className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Analytics & Insights</CardTitle>
-                        <CardDescription>Real-time performance tracking</CardDescription>
-                      </CardHeader>
-                    </Card>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {[
+                        { icon: Bot, title: "AI Matchmaking", desc: "Smart partner matching based on campaign needs" },
+                        { icon: MessageCircle, title: "Real-time Chat", desc: "Seamless communication between parties" },
+                        { icon: FileText, title: "Contract Management", desc: "Digital contract creation and signing" },
+                        { icon: BarChart, title: "Analytics & Insights", desc: "Real-time performance tracking" }
+                      ].map((item, i) => (
+                        <div key={i} className="relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 p-6 transition-all duration-300 hover:from-accent/10 hover:to-primary/10">
+                          <item.icon className="h-5 w-5 text-accent mb-3" />
+                          <h3 className="font-semibold mb-2">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Audiovable */}
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 hover-lift card-shine">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div>
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6 transition-transform duration-300 group-hover:scale-110">
-                      <Headphones className="h-6 w-6" />
+              <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 via-background to-accent/5 p-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
+                  <div className="grid gap-8 md:grid-cols-2">
+                    <div>
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                        <Headphones className="h-6 w-6 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-semibold mb-4">Audiovable</h2>
+                      <p className="text-muted-foreground mb-6 text-lg">
+                        Transform written content into engaging audiobooks with AI-optimized voices and enhanced learning features.
+                      </p>
+                      <ButtonGradient 
+                        onClick={() => handleNavigation('/products/audiovable')}
+                        className="mb-6"
+                      >
+                        Start Converting
+                      </ButtonGradient>
                     </div>
-                    <h2 className="text-3xl font-semibold mb-4">Audiovable</h2>
-                    <p className="text-muted-foreground mb-6 text-lg">
-                      Transform written content into engaging audiobooks with AI-optimized voices and enhanced learning features.
-                    </p>
-                    <ButtonGradient 
-                      onClick={() => handleNavigation('/products/audiovable')}
-                      className="mb-6 group-hover:shadow-lg transition-shadow duration-300"
-                    >
-                      Start Converting
-                    </ButtonGradient>
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Headphones className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Voice Customization</CardTitle>
-                        <CardDescription>Premium male and female voices</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Upload className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Easy Upload</CardTitle>
-                        <CardDescription>Simple drag-and-drop interface</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Share2 className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Share & Download</CardTitle>
-                        <CardDescription>Access content anywhere</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Bot className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>GPT Assistant</CardTitle>
-                        <CardDescription>AI-powered platform help</CardDescription>
-                      </CardHeader>
-                    </Card>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {[
+                        { icon: Headphones, title: "Voice Customization", desc: "Premium male and female voices" },
+                        { icon: Upload, title: "Easy Upload", desc: "Simple drag-and-drop interface" },
+                        { icon: Share2, title: "Share & Download", desc: "Access content anywhere" },
+                        { icon: Bot, title: "GPT Assistant", desc: "AI-powered platform help" }
+                      ].map((item, i) => (
+                        <div key={i} className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 p-6 transition-all duration-300 hover:from-primary/10 hover:to-accent/10">
+                          <item.icon className="h-5 w-5 text-accent mb-3" />
+                          <h3 className="font-semibold mb-2">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* KiddOAi */}
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 hover-lift card-shine">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div>
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6 transition-transform duration-300 group-hover:scale-110">
-                      <Shield className="h-6 w-6" />
+              <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-accent/5 via-background to-primary/5 p-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
+                  <div className="grid gap-8 md:grid-cols-2">
+                    <div>
+                      <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-primary mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                        <Shield className="h-6 w-6 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-semibold mb-4">KiddOAi</h2>
+                      <p className="text-muted-foreground mb-6 text-lg">
+                        COPPA-compliant platform for safe, engaging, and educational children's content with advanced AI moderation.
+                      </p>
+                      <ButtonGradient 
+                        onClick={() => handleNavigation('/products/kiddoai')}
+                        className="mb-6"
+                      >
+                        Learn More
+                      </ButtonGradient>
                     </div>
-                    <h2 className="text-3xl font-semibold mb-4">KiddOAi</h2>
-                    <p className="text-muted-foreground mb-6 text-lg">
-                      COPPA-compliant platform for safe, engaging, and educational children's content with advanced AI moderation.
-                    </p>
-                    <ButtonGradient 
-                      onClick={() => handleNavigation('/products/kiddoai')}
-                      className="mb-6 group-hover:shadow-lg transition-shadow duration-300"
-                    >
-                      Learn More
-                    </ButtonGradient>
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Video className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Smart Filtering</CardTitle>
-                        <CardDescription>AI-powered content moderation</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Clock className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Screen Time</CardTitle>
-                        <CardDescription>Parental control features</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <Lock className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>COPPA Compliant</CardTitle>
-                        <CardDescription>Safe and secure platform</CardDescription>
-                      </CardHeader>
-                    </Card>
-                    <Card className="bg-white/5 border-accent/10 transition-all duration-300 hover:border-accent/30">
-                      <CardHeader>
-                        <ChartLine className="h-5 w-5 text-accent mb-2" />
-                        <CardTitle>Learning Progress</CardTitle>
-                        <CardDescription>Track development goals</CardDescription>
-                      </CardHeader>
-                    </Card>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {[
+                        { icon: Video, title: "Smart Filtering", desc: "AI-powered content moderation" },
+                        { icon: Clock, title: "Screen Time", desc: "Parental control features" },
+                        { icon: Lock, title: "COPPA Compliant", desc: "Safe and secure platform" },
+                        { icon: ChartLine, title: "Learning Progress", desc: "Track development goals" }
+                      ].map((item, i) => (
+                        <div key={i} className="relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 p-6 transition-all duration-300 hover:from-accent/10 hover:to-primary/10">
+                          <item.icon className="h-5 w-5 text-accent mb-3" />
+                          <h3 className="font-semibold mb-2">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground">{item.desc}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,17 +156,19 @@ const Products = () => {
 
             {/* CTA Section */}
             <div className="mt-24 text-center">
-              <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10">
-                <h2 className="text-2xl font-semibold mb-4">Ready to Transform Your Business?</h2>
-                <p className="text-muted-foreground mb-8">
-                  Get started with our AI-powered solutions today
-                </p>
-                <ButtonGradient 
-                  onClick={() => handleNavigation('/contact')}
-                  className="shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  Contact Sales
-                </ButtonGradient>
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-accent/5 via-background to-primary/5 p-1">
+                <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
+                  <h2 className="text-2xl font-semibold mb-4">Ready to Transform Your Business?</h2>
+                  <p className="text-muted-foreground mb-8">
+                    Get started with our AI-powered solutions today
+                  </p>
+                  <ButtonGradient 
+                    onClick={() => handleNavigation('/contact')}
+                    className="shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  >
+                    Contact Sales
+                  </ButtonGradient>
+                </div>
               </div>
             </div>
           </div>
