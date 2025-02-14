@@ -1,9 +1,8 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { PaymentModal } from "@/components/payment/PaymentModal";
 import {
   Table,
   TableBody,
@@ -13,26 +12,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-interface PlanDetails {
-  name: string;
-  price: string;
-  interval: "monthly" | "yearly";
-}
-
 const Pricing = () => {
   const navigate = useNavigate();
-  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<PlanDetails | null>(null);
-
-  const handlePlanSelection = (plan: PlanDetails) => {
-    setSelectedPlan(plan);
-    setIsPaymentModalOpen(true);
-  };
-
-  const handlePaymentModalClose = () => {
-    setIsPaymentModalOpen(false);
-    setSelectedPlan(null);
-  };
 
   return (
     <div className="relative min-h-screen">
@@ -45,96 +26,14 @@ const Pricing = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="text-center mb-16">
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Flexible Pricing for Every Need
+                Simple Pay-as-you-go Pricing
               </h1>
               <p className="text-lg text-muted-foreground sm:text-xl slide-up">
-                Choose between our SaaS plans or Pay-as-you-go API pricing
+                Transparent API pricing for developers and businesses
               </p>
             </div>
 
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold text-center mb-8">SaaS Subscription Plans</h2>
-              <p className="text-center text-muted-foreground mb-12">
-                For direct AI platform users with comprehensive feature access
-              </p>
-              <div className="grid gap-8 md:grid-cols-4">
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
-                  <h3 className="text-2xl font-semibold mb-2">Starter</h3>
-                  <div className="text-3xl font-bold mb-2">$29<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
-                  <p className="text-muted-foreground mb-2">$290/year (Save 2 months)</p>
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 20,000 API calls</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Basic AI automation</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Standard support</li>
-                  </ul>
-                  <ButtonGradient 
-                    className="w-full hover-lift"
-                    onClick={() => handlePlanSelection({ name: "Starter", price: "$29", interval: "monthly" })}
-                  >
-                    Start Free Trial
-                  </ButtonGradient>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border-2 border-accent hover-lift relative">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm">
-                    Most Popular
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-2">Growth</h3>
-                  <div className="text-3xl font-bold mb-2">$99<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
-                  <p className="text-muted-foreground mb-2">$990/year (Save 2 months)</p>
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 100,000 API calls</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Advanced AI automation</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Priority support</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Limited customization</li>
-                  </ul>
-                  <ButtonGradient 
-                    className="w-full hover-lift glow"
-                    onClick={() => handlePlanSelection({ name: "Growth", price: "$99", interval: "monthly" })}
-                  >
-                    Start 14-Day Trial
-                  </ButtonGradient>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
-                  <h3 className="text-2xl font-semibold mb-2">Enterprise</h3>
-                  <div className="text-3xl font-bold mb-2">$249<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
-                  <p className="text-muted-foreground mb-2">$2,490/year (Save 2 months)</p>
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 500,000 API calls</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Full AI automation</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> 24/7 support</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Full customization</li>
-                  </ul>
-                  <ButtonGradient 
-                    className="w-full hover-lift"
-                    onClick={() => handlePlanSelection({ name: "Enterprise", price: "$249", interval: "monthly" })}
-                  >
-                    Start Free Trial
-                  </ButtonGradient>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift">
-                  <h3 className="text-2xl font-semibold mb-2">Custom</h3>
-                  <div className="text-3xl font-bold mb-2">Custom</div>
-                  <p className="text-muted-foreground mb-2">Tailored pricing</p>
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Unlimited API calls</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Custom AI solutions</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Dedicated support</li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-accent mr-2" /> Full customization</li>
-                  </ul>
-                  <ButtonGradient 
-                    className="w-full hover-lift"
-                    onClick={() => navigate('/contact')}
-                  >
-                    Contact Sales
-                  </ButtonGradient>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-24">
+            <div>
               <h2 className="text-3xl font-bold text-center mb-8">PaaS API Pricing</h2>
               <p className="text-center text-muted-foreground mb-12">
                 Pay-per-use model for developers and businesses integrating KolerrAI APIs
@@ -184,7 +83,7 @@ const Pricing = () => {
                 <ButtonGradient 
                   size="lg"
                   className="hover-lift glow"
-                  onClick={() => handlePlanSelection({ name: "Custom", price: "Custom", interval: "monthly" })}
+                  onClick={() => navigate('/contact')}
                 >
                   Get API Access
                 </ButtonGradient>
