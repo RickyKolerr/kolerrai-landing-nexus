@@ -1,4 +1,3 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
@@ -35,7 +34,6 @@ const Products = () => {
             </div>
 
             <div className="space-y-24">
-              {/* Kolerr Platform */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
@@ -48,7 +46,7 @@ const Products = () => {
                     </p>
                     <ButtonGradient 
                       className="mb-6"
-                      onClick={() => handleNavigation('/product/kolerr-platform')}
+                      onClick={() => handleNavigation('/products/kolerr-platform')}
                     >
                       Explore Platform
                     </ButtonGradient>
@@ -86,7 +84,6 @@ const Products = () => {
                 </div>
               </div>
 
-              {/* Audiovable */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
@@ -99,7 +96,7 @@ const Products = () => {
                     </p>
                     <ButtonGradient 
                       className="mb-6"
-                      onClick={() => handleNavigation('/product/audiovable')}
+                      onClick={() => handleNavigation('/products/audiovable')}
                     >
                       Start Converting
                     </ButtonGradient>
@@ -137,7 +134,6 @@ const Products = () => {
                 </div>
               </div>
 
-              {/* KiddOAi */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
@@ -150,7 +146,7 @@ const Products = () => {
                     </p>
                     <ButtonGradient 
                       className="mb-6"
-                      onClick={() => handleNavigation('/product/kiddoai')}
+                      onClick={() => handleNavigation('/products/kiddoai')}
                     >
                       Learn More
                     </ButtonGradient>
