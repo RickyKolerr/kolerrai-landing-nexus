@@ -1,9 +1,13 @@
 
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/utils/translations";
 
 export const HeroSection = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <section className="relative overflow-hidden py-24">
@@ -11,14 +15,18 @@ export const HeroSection = () => {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">
           <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
-            AI-Powered PaaS & SaaS Solutions
+            {t.hero.title}
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Leverage advanced AI technology to optimize, automate, and scale your business operations with our custom-built platforms and solutions.
+            {t.hero.description}
           </p>
           <div className="flex gap-4 justify-center">
-            <ButtonGradient onClick={() => navigate("/contact")}>Get Started</ButtonGradient>
-            <ButtonGradient variant="outline" onClick={() => navigate("/about")}>Learn More</ButtonGradient>
+            <ButtonGradient onClick={() => navigate("/contact")}>
+              {t.common.contact}
+            </ButtonGradient>
+            <ButtonGradient variant="outline" onClick={() => navigate("/about")}>
+              {t.hero.learnMore}
+            </ButtonGradient>
           </div>
         </div>
       </div>
