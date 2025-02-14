@@ -1,13 +1,11 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
-  BrainCircuit, Bot, Cpu, Database, Video, BookOpen, Shield, Gift, Award,
-  MessageCircle, FileText, CreditCard, BarChart, Upload, Headphones,
-  Share2, Users, Clock, Bell, Lock, ChartLine, Sparkles
+  BrainCircuit, Bot, Target, Coins, Video, PieChart, Shield, Gift,
+  MessageCircle, FileText, BarChart, Users, Clock, Sparkles,
+  Settings, Layers, ArrowUpRight
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -50,7 +48,7 @@ const Products = () => {
                       </div>
                       <h2 className="text-3xl font-semibold mb-4">Kolerr Platform</h2>
                       <p className="text-muted-foreground mb-6 text-lg">
-                        An AI-powered platform revolutionizing collaboration between KOLs and brands through smart matchmaking and comprehensive campaign management.
+                        An AI-powered platform revolutionizing KOL marketing with our advanced SLOT technology for intelligent campaign optimization and management.
                       </p>
                       <ButtonGradient 
                         onClick={() => handleNavigation('/products/kolerr-platform')}
@@ -58,13 +56,54 @@ const Products = () => {
                       >
                         Explore Platform
                       </ButtonGradient>
+                      
+                      {/* SLOT Feature Highlight */}
+                      <div className="mt-8 p-4 rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Layers className="h-5 w-5 text-accent" />
+                          <h3 className="font-semibold text-lg">SLOT Technology</h3>
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-3">
+                          Strategic Layer Optimization Technology (SLOT) enables multi-dimensional campaign optimization through AI-driven analysis and segmentation.
+                        </p>
+                        <div className="flex items-center text-sm text-accent cursor-pointer group/link">
+                          <span className="mr-1">Learn more about SLOT</span>
+                          <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                        </div>
+                      </div>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2">
                       {[
-                        { icon: Bot, title: "AI Matchmaking", desc: "Smart partner matching based on campaign needs" },
-                        { icon: MessageCircle, title: "Real-time Chat", desc: "Seamless communication between parties" },
-                        { icon: FileText, title: "Contract Management", desc: "Digital contract creation and signing" },
-                        { icon: BarChart, title: "Analytics & Insights", desc: "Real-time performance tracking" }
+                        { 
+                          icon: Target, 
+                          title: "Smart KOL Matching", 
+                          desc: "AI-powered influencer matching based on engagement data and audience demographics" 
+                        },
+                        { 
+                          icon: Coins, 
+                          title: "Budget Optimization", 
+                          desc: "Intelligent budget allocation for maximum campaign ROI" 
+                        },
+                        { 
+                          icon: PieChart, 
+                          title: "Performance Tracking", 
+                          desc: "Predictive analytics for campaign outcomes" 
+                        },
+                        { 
+                          icon: Users, 
+                          title: "Audience Alignment", 
+                          desc: "Target audience matching with brand profiles" 
+                        },
+                        { 
+                          icon: Video, 
+                          title: "Content Matching", 
+                          desc: "Content type analysis and creator strengths" 
+                        },
+                        { 
+                          icon: Layers, 
+                          title: "Multi-SLOT Campaigns", 
+                          desc: "Segment strategies for different audiences" 
+                        }
                       ].map((item, i) => (
                         <div key={i} className="relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 p-6 transition-all duration-300 hover:from-accent/10 hover:to-primary/10">
                           <item.icon className="h-5 w-5 text-accent mb-3" />
