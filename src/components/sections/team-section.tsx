@@ -14,19 +14,19 @@ export const TeamSection = () => {
       name: "Tony Nguyen",
       role: "Chief Technology Officer",
       description: "Leading our technology vision and driving innovation in AI solutions development. Expert in platform architecture and cutting-edge tech implementation.",
-      imageUrl: "/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png"
+      imageUrl: ""
     },
     {
       name: "Dat Nguyen",
       role: "Chief Operating Officer",
       description: "Orchestrating operational excellence and ensuring seamless delivery of our AI solutions. Focused on scaling our platform capabilities and client success.",
-      imageUrl: "/lovable-uploads/0e91fd2a-58a6-4954-83ff-eadb10237801.png"
+      imageUrl: ""
     },
     {
       name: "Ashley Phạm",
       role: "Marketing Manager",
       description: "Driving our market presence and brand strategy. Specializes in communicating complex AI solutions to diverse audiences and building meaningful client relationships.",
-      imageUrl: "/lovable-uploads/096bca47-8c13-4128-992a-b9daa302e13b.png"
+      imageUrl: ""
     }
   ];
 
@@ -51,8 +51,11 @@ export const TeamSection = () => {
               className="group relative overflow-hidden rounded-2xl border border-accent/10 bg-white/5 p-6 hover:border-accent/20 hover:bg-accent/5 transition-all duration-300 hover-lift text-center"
             >
               <Avatar className="w-32 h-32 mx-auto mb-6">
-                <AvatarImage src={member.imageUrl} alt={member.name} />
-                <AvatarFallback>{member.name[0]}</AvatarFallback>
+                {member.imageUrl ? (
+                  <AvatarImage src={member.imageUrl} alt={member.name} />
+                ) : (
+                  <AvatarFallback className="text-2xl">{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                )}
               </Avatar>
               <h3 className="text-xl font-bold mb-2">{member.name}</h3>
               <p className="text-accent mb-4">{member.role}</p>
