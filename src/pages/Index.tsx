@@ -1,12 +1,19 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { HeroSection } from "@/components/sections/hero-section";
 import { CeoSection } from "@/components/sections/ceo-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
 import { Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handleServicesClick = () => {
+    navigate('/services');
+  };
+
   return (
     <div className="relative min-h-screen">
       <EnhancedNav />
@@ -54,9 +61,12 @@ const Index = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/services" className="text-muted-foreground hover:text-primary">
+                    <button 
+                      onClick={handleServicesClick}
+                      className="text-muted-foreground hover:text-primary"
+                    >
                       Services
-                    </Link>
+                    </button>
                   </li>
                   <li>
                     <Link to="/contact" className="text-muted-foreground hover:text-primary">
