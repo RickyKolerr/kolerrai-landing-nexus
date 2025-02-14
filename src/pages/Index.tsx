@@ -1,4 +1,3 @@
-
 import { BrainCircuit, Rocket, Shield, Laptop, Cpu, Database, Code, LineChart, Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { FeatureCard } from "@/components/feature-card";
@@ -18,41 +17,19 @@ const Index = () => {
       <EnhancedNav />
 
       <div className="pt-16">
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 hero-gradient opacity-10" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
-          <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32">
-            <div className="mx-auto max-w-3xl text-center">
-              <img 
-                src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png" 
-                alt="Kolerr" 
-                className="h-20 mx-auto mb-8 hover-scale"
-              />
-              <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Custom Platform Development & AI Integration Experts
+        <section className="relative overflow-hidden py-24">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+          <div className="relative mx-auto max-w-7xl px-6">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+                AI-Powered PaaS & SaaS Solutions
               </h1>
-              <p className="text-xl text-accent font-semibold mb-6 slide-up" style={{ animationDelay: "0.1s" }}>
-                Building modern SaaS & PaaS solutions that transform businesses through AI-powered automation
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Leverage advanced AI technology to optimize, automate, and scale your business operations with our custom-built platforms and solutions.
               </p>
-              <p className="mb-10 text-lg text-muted-foreground sm:text-xl slide-up" style={{ animationDelay: "0.2s" }}>
-                We help businesses modernize by creating tailored platforms from scratch, integrating advanced AI capabilities and automation to drive efficiency, reduce costs, and enable scalable growth
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
-                <ButtonGradient 
-                  size="lg" 
-                  className="hover-lift glow"
-                  onClick={() => handleNavigation('/contact')}
-                >
-                  Schedule Consultation
-                </ButtonGradient>
-                <ButtonGradient 
-                  size="lg" 
-                  variant="outline" 
-                  className="hover-lift"
-                  onClick={() => handleNavigation('/pricing')}
-                >
-                  View Services
-                </ButtonGradient>
+              <div className="flex gap-4 justify-center">
+                <ButtonGradient onClick={() => handleNavigation("/contact")}>Get Started</ButtonGradient>
+                <ButtonGradient variant="outline" onClick={() => handleNavigation("/about")}>Learn More</ButtonGradient>
               </div>
             </div>
           </div>
@@ -78,280 +55,140 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-secondary/30 py-24">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="mb-16 text-center">
-              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Comprehensive Platform Solutions
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                End-to-end platform development with integrated AI capabilities and long-term support
+        <section className="py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+              <p className="text-xl text-muted-foreground">
+                Comprehensive AI solutions tailored to your business needs
               </p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard
-                icon={Code}
-                title="Custom Development"
-                description="Tailored SaaS & PaaS solutions built from scratch using modern technology stacks"
-                className="fade-in"
-                style={{ animationDelay: "0.1s" }}
-              />
-              <FeatureCard
-                icon={Cpu}
+                icon={<BrainCircuit className="w-12 h-12" />}
                 title="AI Integration"
-                description="Advanced AI capabilities and machine learning models for intelligent automation"
-                className="fade-in"
-                style={{ animationDelay: "0.2s" }}
+                description="Seamlessly integrate AI capabilities into your existing systems"
               />
               <FeatureCard
-                icon={Database}
-                title="Scalable Architecture"
-                description="Cloud-native solutions designed for performance and growth"
-                className="fade-in"
-                style={{ animationDelay: "0.3s" }}
+                icon={<Rocket className="w-12 h-12" />}
+                title="Custom Development"
+                description="Tailored solutions built specifically for your business needs"
               />
               <FeatureCard
-                icon={Shield}
-                title="Ongoing Support"
-                description="Comprehensive maintenance and optimization services"
-                className="fade-in"
-                style={{ animationDelay: "0.4s" }}
+                icon={<Shield className="w-12 h-12" />}
+                title="Security First"
+                description="Enterprise-grade security measures to protect your data"
+              />
+              <FeatureCard
+                icon={<Laptop className="w-12 h-12" />}
+                title="Cloud Solutions"
+                description="Scalable cloud infrastructure for optimal performance"
               />
             </div>
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-secondary/30 py-24">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">60%</div>
-                <p className="text-muted-foreground">Average Cost Reduction</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">80%</div>
-                <p className="text-muted-foreground">Process Automation</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">500+</div>
-                <p className="text-muted-foreground">Platform Deployments</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
-                <p className="text-muted-foreground">Platform Uptime</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden py-24">
-          <div className="absolute inset-0 hero-gradient opacity-5" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Ready to Transform Your Operations?
-              </h2>
-              <p className="mb-8 text-lg text-muted-foreground slide-up">
-                Join industry leaders who are achieving operational excellence with our AI-powered platforms
+        <section className="py-24 bg-secondary/30">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4">Our Technology Stack</h2>
+              <p className="text-xl text-muted-foreground">
+                Built with cutting-edge technologies for optimal performance
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <ButtonGradient 
-                  size="lg" 
-                  className="hover-lift glow"
-                  onClick={() => handleNavigation('/platform')}
-                >
-                  Start Free Trial
-                </ButtonGradient>
-                <ButtonGradient 
-                  size="lg" 
-                  variant="outline"
-                  onClick={() => handleNavigation('/contact')}
-                >
-                  Schedule Demo
-                </ButtonGradient>
-              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <FeatureCard
+                icon={<Cpu className="w-12 h-12" />}
+                title="AI & Machine Learning"
+                description="Advanced algorithms and neural networks"
+              />
+              <FeatureCard
+                icon={<Database className="w-12 h-12" />}
+                title="Big Data Processing"
+                description="Efficient handling of large-scale data"
+              />
+              <FeatureCard
+                icon={<Code className="w-12 h-12" />}
+                title="Modern Architecture"
+                description="Scalable and maintainable codebase"
+              />
+              <FeatureCard
+                icon={<LineChart className="w-12 h-12" />}
+                title="Analytics"
+                description="Comprehensive data analysis and reporting"
+              />
             </div>
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-secondary/30 py-24">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">1M+</div>
-                <p className="text-muted-foreground">API Calls Daily</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">500+</div>
-                <p className="text-muted-foreground">Enterprise Clients</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">50+</div>
-                <p className="text-muted-foreground">Countries Served</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-gradient mb-2">99.9%</div>
-                <p className="text-muted-foreground">Uptime SLA</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden py-24">
-          <div className="absolute inset-0 hero-gradient opacity-5" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_85%)]" />
-          <div className="relative mx-auto max-w-7xl px-6">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Stay Updated with KolerrAI
-              </h2>
-              <p className="mb-8 text-lg text-muted-foreground">
-                Subscribe to our newsletter for the latest updates on AI innovation
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="px-4 py-2 rounded-lg bg-white/5 border border-accent/20 focus:border-accent focus:outline-none"
-                />
-                <ButtonGradient className="hover-lift">
-                  Subscribe
-                </ButtonGradient>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer className="relative bg-secondary/30">
-          <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-              <div className="space-y-4">
-                <Link to="/" className="flex items-center">
-                  <img 
-                    src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png" 
-                    alt="Kolerr" 
-                    className="h-8 w-auto hover-scale"
-                  />
-                </Link>
-                <p className="text-sm text-muted-foreground">
-                  Pioneering AI solutions for modern enterprises, transforming businesses through innovation.
+        <footer className="bg-background py-12">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="font-bold mb-4">About Us</h3>
+                <p className="text-muted-foreground">
+                  KolerrAI specializes in AI-powered PaaS and SaaS solutions for businesses of all sizes.
                 </p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                    <Facebook className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
-                    <Youtube className="h-5 w-5" />
-                  </a>
+              </div>
+              <div>
+                <h3 className="font-bold mb-4">Contact</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    <a href="mailto:info@kolerr.ai" className="text-muted-foreground hover:text-primary">
+                      info@kolerr.ai
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-muted-foreground">San Francisco, CA</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  </div>
                 </div>
               </div>
-
               <div>
-                <h3 className="font-semibold mb-4">Quick Links</h3>
+                <h3 className="font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link to="/products" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Products
+                    <Link to="/about" className="text-muted-foreground hover:text-primary">
+                      About
                     </Link>
                   </li>
                   <li>
-                    <Link to="/platform" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Platform
+                    <Link to="/services" className="text-muted-foreground hover:text-primary">
+                      Services
                     </Link>
                   </li>
                   <li>
-                    <Link to="/solutions" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Solutions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/pricing" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Pricing
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-4">Company</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/about" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/careers" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Careers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+                    <Link to="/contact" className="text-muted-foreground hover:text-primary">
                       Contact
                     </Link>
                   </li>
                 </ul>
               </div>
-
               <div>
-                <h3 className="font-semibold mb-4">Legal</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/terms" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Terms of Service
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/privacy" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/security" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Security
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/compliance" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                      Compliance
-                    </Link>
-                  </li>
-                </ul>
+                <h3 className="font-bold mb-4">Follow Us</h3>
+                <div className="flex gap-4">
+                  <a href="#" className="text-muted-foreground hover:text-primary">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">
+                    <Twitter className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="text-muted-foreground hover:text-primary">
+                    <Youtube className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-accent/10">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <span>contact@kolerrai.com</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+84 938 737 714</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>8th Floor, Nexus Tower, District 1, Ton Duc Thang St, Ho Chi Minh City</span>
-              </div>
-            </div>
-
-            <div className="pt-8 border-t border-accent/10 text-center text-sm text-muted-foreground">
-              <p>© {new Date().getFullYear()} KolerrAI. All rights reserved.</p>
+            <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+              <p>&copy; 2024 KolerrAI. All rights reserved.</p>
             </div>
           </div>
         </footer>
