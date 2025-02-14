@@ -71,7 +71,7 @@ export function EnhancedNav() {
             <img 
               src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png" 
               alt="Kolerr" 
-              className="h-8 w-auto hover-scale"
+              className="h-12 w-auto hover-scale" // Increased from h-8 to h-12
             />
           </Link>
 
