@@ -113,38 +113,26 @@ const Pricing = () => {
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
                 Investment in Your AI Future
               </h1>
-              <p className="text-lg text-white/70 sm:text-xl slide-up max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground sm:text-xl slide-up max-w-3xl mx-auto">
                 Transform your business with our AI solutions. All packages can be customized to your specific requirements.
               </p>
             </div>
 
-            <div className="space-y-24">
-              {pricingCategories.map((category, categoryIndex) => (
-                <div key={category.title} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-fuchsia-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative backdrop-blur-xl rounded-2xl p-8 bg-black/40 border border-white/10 hover:border-white/20 transition-all">
-                    <PricingCategory category={category} />
-                  </div>
-                </div>
-              ))}
-            </div>
+            {pricingCategories.map((category, categoryIndex) => (
+              <PricingCategory key={category.title} category={category} />
+            ))}
 
-            <div className="text-center mt-16">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-fuchsia-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative backdrop-blur-xl rounded-2xl p-8 bg-black/40 border border-white/10 hover:border-white/20 transition-all">
-                  <p className="text-white/70 mb-8">
-                    Need a custom solution? Contact us for a tailored package that meets your specific requirements.
-                  </p>
-                  <ButtonGradient 
-                    size="lg"
-                    className="hover-lift glow"
-                    onClick={() => navigate('/contact')}
-                  >
-                    Schedule Consultation
-                  </ButtonGradient>
-                </div>
-              </div>
+            <div className="text-center">
+              <p className="text-muted-foreground mb-8">
+                Need a custom solution? Contact us for a tailored package that meets your specific requirements.
+              </p>
+              <ButtonGradient 
+                size="lg"
+                className="hover-lift glow"
+                onClick={() => navigate('/contact')}
+              >
+                Schedule Consultation
+              </ButtonGradient>
             </div>
           </div>
         </section>
