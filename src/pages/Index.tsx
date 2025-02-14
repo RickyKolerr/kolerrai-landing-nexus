@@ -29,21 +29,21 @@ const Index = () => {
                 className="h-20 mx-auto mb-8 hover-scale"
               />
               <h1 className="text-gradient mb-6 text-4xl font-bold tracking-tight sm:text-6xl fade-in">
-                Customizable SaaS & PaaS Platforms with Built-in AI Capabilities
+                Custom Platform Development & AI Integration Experts
               </h1>
               <p className="text-xl text-accent font-semibold mb-6 slide-up" style={{ animationDelay: "0.1s" }}>
-                Empowering businesses with AI-driven solutions for smarter, more efficient operations
+                Building modern SaaS & PaaS solutions that transform businesses through AI-powered automation
               </p>
               <p className="mb-10 text-lg text-muted-foreground sm:text-xl slide-up" style={{ animationDelay: "0.2s" }}>
-                Build, deploy, and scale AI-powered business platforms that automate processes, reduce costs, and drive operational excellence—without the complexity
+                We help businesses modernize by creating tailored platforms from scratch, integrating advanced AI capabilities and automation to drive efficiency, reduce costs, and enable scalable growth
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 slide-up" style={{ animationDelay: "0.4s" }}>
                 <ButtonGradient 
                   size="lg" 
                   className="hover-lift glow"
-                  onClick={() => handleNavigation('/platform')}
+                  onClick={() => handleNavigation('/contact')}
                 >
-                  Explore Platform
+                  Schedule Consultation
                 </ButtonGradient>
                 <ButtonGradient 
                   size="lg" 
@@ -51,7 +51,7 @@ const Index = () => {
                   className="hover-lift"
                   onClick={() => handleNavigation('/pricing')}
                 >
-                  View Pricing
+                  View Services
                 </ButtonGradient>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "We specialize in building flexible, customizable SaaS and PaaS platforms that integrate AI to streamline business operations, automate tasks, and reduce manual effort. Our solutions empower businesses to optimize processes and achieve substantial cost savings, all without the complexity of developing custom AI systems."
+                "Our mission is to empower businesses with custom-built platforms that integrate cutting-edge AI capabilities. We don't just build software; we create scalable, future-proof solutions that drive digital transformation and deliver measurable business value through automation and intelligent workflows."
               </p>
             </div>
           </div>
@@ -83,38 +83,38 @@ const Index = () => {
           <div className="relative mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <h2 className="text-gradient mb-4 text-3xl font-bold sm:text-4xl fade-in">
-                Platform Benefits
+                Comprehensive Platform Solutions
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground slide-up">
-                Experience the power of AI-driven automation in your daily operations
+                End-to-end platform development with integrated AI capabilities and long-term support
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <FeatureCard
-                icon={BrainCircuit}
-                title="Process Automation"
-                description="Reduce manual tasks by up to 80% with AI-powered workflows built into our platforms"
+                icon={Code}
+                title="Custom Development"
+                description="Tailored SaaS & PaaS solutions built from scratch using modern technology stacks"
                 className="fade-in"
                 style={{ animationDelay: "0.1s" }}
               />
               <FeatureCard
-                icon={Rocket}
-                title="Cost Efficiency"
-                description="Cut operational costs by 40-60% through automated processes and optimized workflows"
+                icon={Cpu}
+                title="AI Integration"
+                description="Advanced AI capabilities and machine learning models for intelligent automation"
                 className="fade-in"
                 style={{ animationDelay: "0.2s" }}
               />
               <FeatureCard
-                icon={Shield}
-                title="Easy Integration"
-                description="Deploy and integrate with your existing systems in days, not months"
+                icon={Database}
+                title="Scalable Architecture"
+                description="Cloud-native solutions designed for performance and growth"
                 className="fade-in"
                 style={{ animationDelay: "0.3s" }}
               />
               <FeatureCard
-                icon={Laptop}
-                title="Immediate ROI"
-                description="See tangible results within weeks through reduced labor costs and improved efficiency"
+                icon={Shield}
+                title="Ongoing Support"
+                description="Comprehensive maintenance and optimization services"
                 className="fade-in"
                 style={{ animationDelay: "0.4s" }}
               />
