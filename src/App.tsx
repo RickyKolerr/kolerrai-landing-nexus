@@ -23,6 +23,9 @@ import NotFound from "./pages/NotFound";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import ResetPassword from "./pages/auth/ResetPassword";
+import KolerrPlatform from "./pages/products/KolerrPlatform";
+import Audiovable from "./pages/products/Audiovable";
+import KiddOAi from "./pages/products/KiddOAi";
 
 const queryClient = new QueryClient();
 
@@ -49,7 +52,9 @@ const App = () => (
           <Route path="/security" element={<Security />} />
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/product/:id" element={<Platform />} />
+          <Route path="/product/kolerr-platform" element={<KolerrPlatform />} />
+          <Route path="/product/audiovable" element={<Audiovable />} />
+          <Route path="/product/kiddoai" element={<KiddOAi />} />
           <Route path="/auth/sign-in" element={<SignIn />} />
           <Route path="/auth/sign-up" element={<SignUp />} />
           <Route path="/auth/reset-password" element={<ResetPassword />} />
