@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { Menu, ChevronLeft, Home, LayoutGrid, Box, DollarSign, BookOpen, Mail } from "lucide-react";
+import { Menu, ChevronLeft, Home, Box, Cpu, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ButtonGradient } from "./ui/button-gradient";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -14,10 +14,8 @@ export function EnhancedNav() {
 
   const menuItems = [
     { icon: Home, label: "Home", path: "/" },
-    { icon: LayoutGrid, label: "Features", path: "/features" },
     { icon: Box, label: "Products", path: "/products" },
-    { icon: DollarSign, label: "Pricing", path: "/pricing" },
-    { icon: BookOpen, label: "Blog", path: "/blog" },
+    { icon: Cpu, label: "Platform", path: "/platform" },
     { icon: Mail, label: "Contact", path: "/contact" },
   ];
 
@@ -34,7 +32,6 @@ export function EnhancedNav() {
       const touchEnd = e.changedTouches[0].clientX;
       const swipeDistance = touchStart - touchEnd;
 
-      // Swipe right to go back (threshold of 100px)
       if (swipeDistance < -100 && location.pathname !== '/') {
         navigate(-1);
       }
@@ -60,7 +57,6 @@ export function EnhancedNav() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Back Button - Hidden on home page */}
           {location.pathname !== '/' && (
             <button
               onClick={() => navigate(-1)}
@@ -71,7 +67,6 @@ export function EnhancedNav() {
             </button>
           )}
 
-          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/266e6917-4145-4dfa-bd1a-f13d2e358723.png" 
@@ -80,7 +75,6 @@ export function EnhancedNav() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
               <Link
@@ -95,10 +89,14 @@ export function EnhancedNav() {
                 {item.label}
               </Link>
             ))}
-            <ButtonGradient size="sm">Get Started</ButtonGradient>
+            <ButtonGradient 
+              size="sm"
+              onClick={() => navigate('/contact')}
+            >
+              Get in Touch
+            </ButtonGradient>
           </nav>
 
-          {/* Mobile Navigation */}
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
               <button 
@@ -124,7 +122,12 @@ export function EnhancedNav() {
                     {item.label}
                   </Link>
                 ))}
-                <ButtonGradient className="mt-4">Get Started</ButtonGradient>
+                <ButtonGradient 
+                  className="mt-4"
+                  onClick={() => navigate('/contact')}
+                >
+                  Get in Touch
+                </ButtonGradient>
               </nav>
             </SheetContent>
           </Sheet>
