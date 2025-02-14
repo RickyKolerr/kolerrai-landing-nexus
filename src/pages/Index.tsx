@@ -66,22 +66,22 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard
-                icon={<BrainCircuit className="w-12 h-12" />}
+                icon={BrainCircuit}
                 title="AI Integration"
                 description="Seamlessly integrate AI capabilities into your existing systems"
               />
               <FeatureCard
-                icon={<Rocket className="w-12 h-12" />}
+                icon={Rocket}
                 title="Custom Development"
                 description="Tailored solutions built specifically for your business needs"
               />
               <FeatureCard
-                icon={<Shield className="w-12 h-12" />}
+                icon={Shield}
                 title="Security First"
                 description="Enterprise-grade security measures to protect your data"
               />
               <FeatureCard
-                icon={<Laptop className="w-12 h-12" />}
+                icon={Laptop}
                 title="Cloud Solutions"
                 description="Scalable cloud infrastructure for optimal performance"
               />
@@ -99,22 +99,22 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard
-                icon={<Cpu className="w-12 h-12" />}
+                icon={Cpu}
                 title="AI & Machine Learning"
                 description="Advanced algorithms and neural networks"
               />
               <FeatureCard
-                icon={<Database className="w-12 h-12" />}
+                icon={Database}
                 title="Big Data Processing"
                 description="Efficient handling of large-scale data"
               />
               <FeatureCard
-                icon={<Code className="w-12 h-12" />}
+                icon={Code}
                 title="Modern Architecture"
                 description="Scalable and maintainable codebase"
               />
               <FeatureCard
-                icon={<LineChart className="w-12 h-12" />}
+                icon={LineChart}
                 title="Analytics"
                 description="Comprehensive data analysis and reporting"
               />
