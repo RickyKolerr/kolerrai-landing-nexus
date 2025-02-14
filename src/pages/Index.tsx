@@ -72,7 +72,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "Our mission is to empower businesses with custom-built platforms that integrate cutting-edge AI capabilities. We don't just build software; we create scalable, future-proof solutions that drive digital transformation and deliver measurable business value through automation and intelligent workflows."
+                "Our mission is to empower businesses by designing and building custom platforms that integrate cutting-edge AI capabilities. We don't just develop software; we create scalable, future-proof digital solutions that drive seamless digital transformation, optimize business operations, and deliver measurable value through automation and intelligent workflows."
               </p>
             </div>
           </div>
