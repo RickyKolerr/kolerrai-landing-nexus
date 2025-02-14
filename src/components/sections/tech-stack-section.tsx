@@ -1,64 +1,90 @@
 
-import { BrainCircuit, Database, Code, LineChart, Rocket } from "lucide-react";
+import { BrainCircuit, Database, Code, LineChart, Rocket, Shield, Cloud, Workflow } from "lucide-react";
 
 export const TechStackSection = () => {
   const techStackData = [
     {
       icon: BrainCircuit,
-      title: "AI & Machine Learning",
-      description: "State-of-the-art AI models powered by OpenAI, Google Vertex AI, and LangChain",
+      title: "Enterprise AI & ML",
+      description: "Advanced AI models and ML pipelines for enterprise-scale automation",
       details: [
-        "Custom AI solutions with TensorFlow and PyTorch",
-        "Adaptive AI workflows for continuous optimization",
-        "Intelligent automation & decision-making systems"
+        "Custom large language models (LLMs)",
+        "Neural networks for predictive analytics",
+        "AutoML for continuous optimization",
+        "Computer vision & NLP solutions"
+      ]
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Infrastructure",
+      description: "Secure, scalable cloud architecture for mission-critical operations",
+      details: [
+        "Multi-cloud deployment strategies",
+        "Kubernetes orchestration",
+        "Microservices architecture",
+        "Zero-trust security framework"
       ]
     },
     {
       icon: Database,
-      title: "Big Data Processing",
-      description: "Real-time data streaming with Apache Kafka & Google Pub/Sub",
+      title: "Big Data & Analytics",
+      description: "Enterprise-grade data processing and analytics solutions",
       details: [
-        "Scalable cloud storage with AWS S3 & BigQuery",
-        "AI-powered data insights using Spark & Hadoop",
-        "Enterprise-grade data management solutions"
+        "Real-time data streaming & processing",
+        "Data lakes and warehousing",
+        "Advanced BI dashboards",
+        "Predictive analytics models"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Security & Compliance",
+      description: "Industry-leading security protocols and compliance frameworks",
+      details: [
+        "End-to-end encryption",
+        "SOC 2 Type II compliance",
+        "GDPR & HIPAA compliance",
+        "Advanced threat detection"
+      ]
+    },
+    {
+      icon: Workflow,
+      title: "Process Automation",
+      description: "Intelligent workflow automation for business processes",
+      details: [
+        "RPA integration & orchestration",
+        "Smart document processing",
+        "Automated decision systems",
+        "Business process optimization"
       ]
     },
     {
       icon: Code,
-      title: "Modern Architecture",
-      description: "Microservices-based SaaS/PaaS with Node.js, Python & Golang",
+      title: "Modern Development",
+      description: "Cutting-edge development practices and tools",
       details: [
-        "Serverless & Cloud-native deployments",
-        "GraphQL APIs for flexible data access",
-        "OAuth2.0 & JWT for enterprise security"
-      ]
-    },
-    {
-      icon: LineChart,
-      title: "Advanced Analytics",
-      description: "AI-powered business intelligence with Tableau & Power BI",
-      details: [
-        "Custom predictive analytics models",
-        "Real-time interactive dashboards",
-        "Automated KPI tracking & reporting"
+        "CI/CD automation pipelines",
+        "Infrastructure as Code (IaC)",
+        "Containerization & orchestration",
+        "API-first architecture"
       ]
     }
   ];
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-secondary/5">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center gap-2 rounded-full bg-accent/10 px-4 py-1.5 mb-4">
             <Rocket className="h-4 w-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Our Technology Stack</span>
+            <span className="text-sm font-medium text-accent">Enterprise Technology Stack</span>
           </div>
-          <h2 className="text-4xl font-bold mb-4">Built with Cutting-Edge Technologies</h2>
+          <h2 className="text-4xl font-bold mb-4">Built for Enterprise Scale</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Leverage our advanced technology stack for optimal performance, scalability, and innovation in your business operations
+            Leverage our comprehensive technology stack designed for scalability, security, and innovation in enterprise operations
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techStackData.map((tech, index) => (
             <div
               key={index}
