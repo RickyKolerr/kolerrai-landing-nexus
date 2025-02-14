@@ -33,37 +33,42 @@ const Contact = () => {
               </p>
             </div>
             <div className="max-w-lg mx-auto">
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
-                  />
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-fuchsia-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative backdrop-blur-xl rounded-2xl p-8 bg-black/40 border border-white/10 hover:border-white/20 transition-all">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-white/90">Name</label>
+                      <input
+                        type="text"
+                        required
+                        className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-white/20 focus:outline-none focus:ring-2 focus:ring-violet-500/10 text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-white/90">Email</label>
+                      <input
+                        type="email"
+                        required
+                        className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-white/20 focus:outline-none focus:ring-2 focus:ring-violet-500/10 text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-white/90">Message</label>
+                      <textarea
+                        rows={4}
+                        required
+                        className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/10 focus:border-white/20 focus:outline-none focus:ring-2 focus:ring-violet-500/10 text-white"
+                      />
+                    </div>
+                    <ButtonGradient type="submit" className="w-full hover-lift glow">
+                      Send Message
+                    </ButtonGradient>
+                  </form>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    rows={4}
-                    required
-                    className="w-full px-4 py-2 rounded-lg bg-white/5 border border-accent/10 focus:border-accent/20 focus:outline-none focus:ring-2 focus:ring-accent/10"
-                  />
-                </div>
-                <ButtonGradient type="submit" className="w-full hover-lift glow">
-                  Send Message
-                </ButtonGradient>
-              </form>
+              </div>
               <div className="mt-8 text-center">
-                <p className="text-muted-foreground mb-4">Or explore our solutions</p>
+                <p className="text-white/70 mb-4">Or explore our solutions</p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <ButtonGradient 
                     variant="outline"
