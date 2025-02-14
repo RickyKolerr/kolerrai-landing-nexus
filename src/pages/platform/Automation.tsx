@@ -39,11 +39,6 @@ const Automation = () => {
               </div>
 
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10">
-                <img 
-                  src="/lovable-uploads/781a2a9e-5813-4d1d-aba1-a8dfbf69a9ac.png" 
-                  alt="AI Automation" 
-                  className="w-full rounded-lg mb-6"
-                />
                 <h3 className="text-2xl font-semibold mb-4">Smart Workflows</h3>
                 <p className="text-muted-foreground">
                   Create and manage intelligent workflows that adapt to your business needs.
