@@ -1,3 +1,4 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
@@ -34,6 +35,7 @@ const Products = () => {
             </div>
 
             <div className="space-y-24">
+              {/* Kolerr Platform */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
@@ -45,8 +47,8 @@ const Products = () => {
                       An AI-powered platform revolutionizing collaboration between KOLs and brands through smart matchmaking and comprehensive campaign management.
                     </p>
                     <ButtonGradient 
-                      className="mb-6"
                       onClick={() => handleNavigation('/products/kolerr-platform')}
+                      className="mb-6"
                     >
                       Explore Platform
                     </ButtonGradient>
@@ -84,19 +86,20 @@ const Products = () => {
                 </div>
               </div>
 
+              {/* Audiovable */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
                     <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent mb-6">
-                      <BookOpen className="h-6 w-6" />
+                      <Headphones className="h-6 w-6" />
                     </div>
                     <h2 className="text-3xl font-semibold mb-4">Audiovable</h2>
                     <p className="text-muted-foreground mb-6">
                       Transform written content into engaging audiobooks with AI-optimized voices and enhanced learning features.
                     </p>
                     <ButtonGradient 
-                      className="mb-6"
                       onClick={() => handleNavigation('/products/audiovable')}
+                      className="mb-6"
                     >
                       Start Converting
                     </ButtonGradient>
@@ -134,6 +137,7 @@ const Products = () => {
                 </div>
               </div>
 
+              {/* KiddOAi */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-accent/10 hover-lift card-shine">
                 <div className="grid gap-8 md:grid-cols-2">
                   <div>
@@ -145,8 +149,8 @@ const Products = () => {
                       COPPA-compliant platform for safe, engaging, and educational children's content with advanced AI moderation.
                     </p>
                     <ButtonGradient 
-                      className="mb-6"
                       onClick={() => handleNavigation('/products/kiddoai')}
+                      className="mb-6"
                     >
                       Learn More
                     </ButtonGradient>

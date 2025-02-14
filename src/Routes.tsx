@@ -16,6 +16,10 @@ import NotFound from "@/pages/NotFound";
 import KolerrPlatform from "@/pages/products/KolerrPlatform";
 import Audiovable from "@/pages/products/Audiovable";
 import KiddOAi from "@/pages/products/KiddOAi";
+import Terms from "@/pages/Terms";
+import Privacy from "@/pages/Privacy";
+import Security from "@/pages/Security";
+import Success from "@/pages/Success";
 
 const Routes = () => {
   return (
@@ -32,6 +36,10 @@ const Routes = () => {
       <Route path="/careers" element={<Careers />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/compliance" element={<Compliance />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/security" element={<Security />} />
+      <Route path="/success" element={<Success />} />
       
       {/* Product specific routes */}
       <Route path="/products/kolerr-platform" element={<KolerrPlatform />} />
