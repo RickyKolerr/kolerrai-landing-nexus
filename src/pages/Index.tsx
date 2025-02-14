@@ -50,7 +50,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-2">Ricky Anh Nguyen</h3>
               <p className="text-accent mb-6">CEO & Founder</p>
               <p className="text-xl text-muted-foreground italic">
-                "Our mission is to empower businesses by designing and building custom platforms that integrate cutting-edge AI capabilities. We don't just develop software; we create scalable, future-proof digital solutions that drive seamless digital transformation, optimize business operations, and deliver measurable value through automation and intelligent workflows."
+                "Our mission is to empower businesses by designing and building custom platforms that integrate cutting-edge AI capabilities. We don't just develop software, we create scalable, future-proof digital solutions that drive seamless digital transformation, optimize business operations, and deliver measurable value through automation and intelligent workflows."
               </p>
             </div>
           </div>
@@ -66,22 +66,22 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard
-                icon={BrainCircuit}
+                icon={<BrainCircuit className="w-12 h-12" />}
                 title="AI Integration"
                 description="Seamlessly integrate AI capabilities into your existing systems"
               />
               <FeatureCard
-                icon={Rocket}
+                icon={<Rocket className="w-12 h-12" />}
                 title="Custom Development"
                 description="Tailored solutions built specifically for your business needs"
               />
               <FeatureCard
-                icon={Shield}
+                icon={<Shield className="w-12 h-12" />}
                 title="Security First"
                 description="Enterprise-grade security measures to protect your data"
               />
               <FeatureCard
-                icon={Laptop}
+                icon={<Laptop className="w-12 h-12" />}
                 title="Cloud Solutions"
                 description="Scalable cloud infrastructure for optimal performance"
               />
@@ -99,22 +99,22 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard
-                icon={Cpu}
+                icon={<Cpu className="w-12 h-12" />}
                 title="AI & Machine Learning"
                 description="Advanced algorithms and neural networks"
               />
               <FeatureCard
-                icon={Database}
+                icon={<Database className="w-12 h-12" />}
                 title="Big Data Processing"
                 description="Efficient handling of large-scale data"
               />
               <FeatureCard
-                icon={Code}
+                icon={<Code className="w-12 h-12" />}
                 title="Modern Architecture"
                 description="Scalable and maintainable codebase"
               />
               <FeatureCard
-                icon={LineChart}
+                icon={<LineChart className="w-12 h-12" />}
                 title="Analytics"
                 description="Comprehensive data analysis and reporting"
               />
