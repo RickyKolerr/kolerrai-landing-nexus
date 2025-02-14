@@ -1,7 +1,10 @@
-
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
-import { Cpu, Shield, Zap, Cloud, LineChart, Code } from "lucide-react";
+import { 
+  Cpu, Shield, Zap, Cloud, LineChart, Code, 
+  ArrowRight, Users, Book, Rocket, MessageSquare,
+  Globe, Award, HeartHandshake, ChevronRight
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Platform = () => {
@@ -165,6 +168,128 @@ const Platform = () => {
           </div>
         </section>
       </div>
+
+      <main className="mt-24">
+        <div className="relative">
+          <footer className="mt-32 border-t border-white/10">
+            <div className="grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Platform</h3>
+                <ul className="space-y-3">
+                  {[
+                    { label: "AI Automation", path: "/platform/automation" },
+                    { label: "Campaign Management", path: "/platform/campaigns" },
+                    { label: "Analytics Dashboard", path: "/platform/analytics" },
+                    { label: "Integration Hub", path: "/platform/integrations" },
+                    { label: "API Documentation", path: "/docs/api" }
+                  ].map((item) => (
+                    <li key={item.label}>
+                      <button 
+                        onClick={() => navigate(item.path)}
+                        className="flex items-center text-white/70 hover:text-white transition-colors group"
+                      >
+                        <ChevronRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {item.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Solutions</h3>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Enterprise Suite", icon: Rocket, path: "/solutions/enterprise" },
+                    { label: "Agency Tools", icon: Users, path: "/solutions/agency" },
+                    { label: "Developer Resources", icon: Code, path: "/solutions/developers" },
+                    { label: "Success Stories", icon: Award, path: "/case-studies" }
+                  ].map((item) => (
+                    <li key={item.label}>
+                      <button 
+                        onClick={() => navigate(item.path)}
+                        className="flex items-center text-white/70 hover:text-white transition-colors"
+                      >
+                        <item.icon className="w-4 h-4 mr-2" />
+                        {item.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Resources</h3>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Documentation", icon: Book, path: "/docs" },
+                    { label: "Learning Center", icon: Globe, path: "/learn" },
+                    { label: "Community", icon: MessageSquare, path: "/community" },
+                    { label: "Partner Program", icon: HeartHandshake, path: "/partners" }
+                  ].map((item) => (
+                    <li key={item.label}>
+                      <button 
+                        onClick={() => navigate(item.path)}
+                        className="flex items-center text-white/70 hover:text-white transition-colors"
+                      >
+                        <item.icon className="w-4 h-4 mr-2" />
+                        {item.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Get Started</h3>
+                <div className="space-y-4">
+                  <ButtonGradient 
+                    onClick={() => navigate('/contact')}
+                    className="w-full justify-between"
+                  >
+                    Schedule Demo
+                    <ArrowRight className="w-4 h-4" />
+                  </ButtonGradient>
+                  <ButtonGradient 
+                    variant="outline"
+                    onClick={() => navigate('/pricing')}
+                    className="w-full justify-between"
+                  >
+                    View Pricing
+                    <ArrowRight className="w-4 h-4" />
+                  </ButtonGradient>
+                  <p className="text-sm text-white/70">
+                    Experience the power of AI-driven automation and smart campaign management.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="py-6 border-t border-white/10">
+              <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+                <p className="text-sm text-white/70">
+                  © 2024 Kolerr Technologies. All rights reserved.
+                </p>
+                <div className="flex gap-6">
+                  {[
+                    { label: "Terms", path: "/terms" },
+                    { label: "Privacy", path: "/privacy" },
+                    { label: "Security", path: "/security" }
+                  ].map((item) => (
+                    <button
+                      key={item.label}
+                      onClick={() => navigate(item.path)}
+                      className="text-sm text-white/70 hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
     </div>
   );
 };
