@@ -5,7 +5,8 @@ import { FeatureCard } from "@/components/feature-card";
 import { 
   Cpu, Shield, Zap, Cloud, LineChart, Code, 
   ArrowRight, Book, Rocket, MessageSquare,
-  Globe, Award, HeartHandshake, ChevronRight
+  Globe, Award, HeartHandshake, ChevronRight,
+  Lock // Add Lock icon import
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
