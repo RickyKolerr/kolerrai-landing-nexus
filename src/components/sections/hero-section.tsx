@@ -22,7 +22,7 @@ export const HeroSection = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <ButtonGradient onClick={() => navigate("/contact")}>
-              {t.actions.contact}
+              {t.common.contact}
             </ButtonGradient>
             <ButtonGradient variant="outline" onClick={() => navigate("/about")}>
               {t.hero.learnMore}
