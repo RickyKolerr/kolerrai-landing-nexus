@@ -1,9 +1,10 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
   BrainCircuit, Bot, Target, Coins, Video, PieChart, Shield, Gift,
   MessageCircle, FileText, BarChart, Users, Clock, Sparkles,
-  Settings, Layers, ArrowUpRight, Headset, ArrowUpLoad, Share,
+  Settings, Layers, ArrowUpRight, Headset, Upload, Share,
   TrendingUp
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -37,6 +38,7 @@ const Products = () => {
             </div>
 
             <div className="space-y-24">
+              {/* Kolerr Platform */}
               <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-accent/5 via-background to-primary/5 p-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
@@ -114,6 +116,7 @@ const Products = () => {
                 </div>
               </div>
 
+              {/* Audiovable */}
               <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 via-background to-accent/5 p-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
@@ -136,7 +139,7 @@ const Products = () => {
                     <div className="grid gap-4 sm:grid-cols-2">
                       {[
                         { icon: Headset, title: "Voice Customization", desc: "Premium male and female voices" },
-                        { icon: ArrowUpLoad, title: "Easy Upload", desc: "Simple drag-and-drop interface" },
+                        { icon: Upload, title: "Easy Upload", desc: "Simple drag-and-drop interface" },
                         { icon: Share, title: "Share & Download", desc: "Access content anywhere" },
                         { icon: Bot, title: "GPT Assistant", desc: "AI-powered platform help" }
                       ].map((item, i) => (
@@ -151,6 +154,7 @@ const Products = () => {
                 </div>
               </div>
 
+              {/* KiddOAi */}
               <div className="relative group overflow-hidden rounded-2xl bg-gradient-to-br from-accent/5 via-background to-primary/5 p-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative bg-background/80 backdrop-blur-xl rounded-xl p-8">
