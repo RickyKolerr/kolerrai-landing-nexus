@@ -34,7 +34,7 @@ const Index = () => {
           </svg>
         </div>
 
-        {/* Main content sections with enhanced spacing and animations */}
+        {/* Main content sections */}
         <div className="relative bg-background">
           <div className="space-y-24 pb-24">
             <CeoSection />
@@ -43,80 +43,120 @@ const Index = () => {
             <TeamSection />
           </div>
 
-          {/* Enhanced Footer */}
-          <footer className="relative bg-background/95 backdrop-blur-lg py-16 border-t border-accent/10">
-            <div className="mx-auto max-w-7xl px-6">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div className="space-y-4">
-                  <h3 className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">About Us</h3>
-                  <p className="text-muted-foreground">
+          {/* Redesigned Footer */}
+          <footer className="relative bg-gradient-to-b from-background/95 to-background backdrop-blur-xl border-t border-accent/10">
+            <div className="mx-auto max-w-7xl px-6 py-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+                {/* About Section */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    About Us
+                  </h3>
+                  <p className="text-muted-foreground/90 leading-relaxed">
                     KolerrAI specializes in AI-powered PaaS and SaaS solutions for businesses of all sizes.
                   </p>
                 </div>
-                
-                <div className="space-y-4">
-                  <h3 className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Contact</h3>
-                  <div className="space-y-3">
-                    <a href="mailto:info@kolerr.ai" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                      <Mail className="w-4 h-4" />
-                      info@kolerr.ai
+
+                {/* Contact Section */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Contact
+                  </h3>
+                  <div className="space-y-4">
+                    <a 
+                      href="mailto:info@kolerr.ai" 
+                      className="flex items-center space-x-3 text-muted-foreground/90 hover:text-primary transition-colors group"
+                    >
+                      <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
+                      <span>info@kolerr.ai</span>
                     </a>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <MapPin className="w-4 h-4" />
-                      San Francisco, CA
+                    <div className="flex items-center space-x-3 text-muted-foreground/90">
+                      <MapPin className="w-5 h-5" />
+                      <span>San Francisco, CA</span>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Phone className="w-4 h-4" />
-                      +1 (555) 123-4567
+                    <div className="flex items-center space-x-3 text-muted-foreground/90">
+                      <Phone className="w-5 h-5" />
+                      <span>+1 (555) 123-4567</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Quick Links</h3>
-                  <ul className="space-y-3">
+                {/* Quick Links Section */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Quick Links
+                  </h3>
+                  <ul className="space-y-4">
                     <li>
-                      <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                      <Link 
+                        to="/about" 
+                        className="text-muted-foreground/90 hover:text-primary transition-colors inline-flex items-center"
+                      >
                         About
                       </Link>
                     </li>
                     <li>
                       <button 
                         onClick={handleServicesClick}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground/90 hover:text-primary transition-colors inline-flex items-center"
                       >
                         Services
                       </button>
                     </li>
                     <li>
-                      <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                      <Link 
+                        to="/contact" 
+                        className="text-muted-foreground/90 hover:text-primary transition-colors inline-flex items-center"
+                      >
                         Contact
                       </Link>
                     </li>
                   </ul>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Follow Us</h3>
-                  <div className="flex gap-4">
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-accent/10 rounded-full">
+                {/* Social Links Section */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Follow Us
+                  </h3>
+                  <div className="flex items-center gap-4">
+                    <a 
+                      href="#" 
+                      className="w-10 h-10 flex items-center justify-center rounded-full bg-accent/5 hover:bg-accent/10 text-muted-foreground/90 hover:text-primary transition-all duration-200"
+                      aria-label="Facebook"
+                    >
                       <Facebook className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-accent/10 rounded-full">
+                    <a 
+                      href="#" 
+                      className="w-10 h-10 flex items-center justify-center rounded-full bg-accent/5 hover:bg-accent/10 text-muted-foreground/90 hover:text-primary transition-all duration-200"
+                      aria-label="Twitter"
+                    >
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-accent/10 rounded-full">
+                    <a 
+                      href="#" 
+                      className="w-10 h-10 flex items-center justify-center rounded-full bg-accent/5 hover:bg-accent/10 text-muted-foreground/90 hover:text-primary transition-all duration-200"
+                      aria-label="LinkedIn"
+                    >
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-accent/10 rounded-full">
+                    <a 
+                      href="#" 
+                      className="w-10 h-10 flex items-center justify-center rounded-full bg-accent/5 hover:bg-accent/10 text-muted-foreground/90 hover:text-primary transition-all duration-200"
+                      aria-label="YouTube"
+                    >
                       <Youtube className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="border-t border-accent/10 mt-12 pt-8 text-center text-muted-foreground">
-                <p>&copy; 2024 KolerrAI. All rights reserved.</p>
+              {/* Copyright Section */}
+              <div className="mt-16 pt-8 border-t border-accent/10">
+                <p className="text-center text-muted-foreground/70">
+                  &copy; {new Date().getFullYear()} KolerrAI. All rights reserved.
+                </p>
               </div>
             </div>
           </footer>
