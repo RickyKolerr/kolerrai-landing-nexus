@@ -5,6 +5,12 @@ import { Users } from "lucide-react";
 export const TeamSection = () => {
   const teamMembers = [
     {
+      name: "Peter Nguyen",
+      role: "Chief Executive Officer",
+      description: "Visionary leader driving KolerrAI's mission to revolutionize AI solutions. Focused on strategic growth and innovation in the AI industry.",
+      imageUrl: "/lovable-uploads/99c4eb06-a618-421b-a272-81e310d4431d.png"
+    },
+    {
       name: "Huy",
       role: "Chief Technology Officer",
       description: "Leading our technology vision and driving innovation in AI solutions development. Expert in platform architecture and cutting-edge tech implementation.",
@@ -38,7 +44,7 @@ export const TeamSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
             <div
               key={member.name}
