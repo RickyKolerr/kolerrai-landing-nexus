@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,11 +33,26 @@
 
   html {
     @apply scroll-smooth antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  /* For WebKit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
   }
 }
 
@@ -52,6 +68,11 @@
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(90deg, #00E5FF, #0066FF, #D100D1, #FF4081);
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 8s linear infinite;
   }
 
   .glow {
@@ -75,27 +96,27 @@
     @apply transition-transform duration-300 hover:scale-105;
   }
 
-  /* Page Transition Animations */
-  .page-enter {
-    opacity: 0;
-    transform: translateY(10px);
+  /* Mobile touch feedback */
+  @media (hover: none) {
+    .hover-lift:active {
+      @apply -translate-y-1;
+    }
+    
+    .hover-scale:active {
+      @apply scale-105;
+    }
   }
+}
 
-  .page-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms, transform 300ms;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
-
-  .page-exit {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    background-position: 100% 50%;
   }
-
-  .page-exit-active {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 300ms, transform 300ms;
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -133,28 +154,29 @@
   100% { transform: translateY(0px); }
 }
 
-.card-shine {
-  --shine-deg: 45deg;
-  position: relative;
-  overflow: hidden;
+/* PWA improvements */
+@media (display-mode: standalone) {
+  /* Adjust safe areas for PWA */
+  body {
+    @apply pb-safe;
+  }
+  
+  .fixed-bottom {
+    @apply pb-safe;
+  }
 }
 
-.card-shine::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(
-    var(--shine-deg),
-    transparent 20%,
-    rgba(255, 255, 255, 0.1) 25%,
-    transparent 30%
-  );
-  animation: shine 8s infinite;
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
-@keyframes shine {
-  0% { transform: translateX(-100%); }
-  10% { transform: translateX(100%); }
-  100% { transform: translateX(100%); }
+/* Better touch targets for mobile */
+button, a {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
