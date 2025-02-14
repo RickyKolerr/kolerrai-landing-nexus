@@ -1,9 +1,10 @@
+
 import { EnhancedNav } from "@/components/enhanced-nav";
 import { ButtonGradient } from "@/components/ui/button-gradient";
 import { 
   BrainCircuit, Bot, Target, Coins, Video, PieChart, Shield, Gift,
   MessageCircle, FileText, BarChart, Users, Clock, Sparkles,
-  Settings, Layers, ArrowUpRight
+  Settings, Layers, ArrowUpRight, Headphones, Upload, Share2, Lock, ChartLine
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
