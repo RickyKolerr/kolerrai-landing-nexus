@@ -1,8 +1,7 @@
 
-import { BrainCircuit, Code, Shield, LineChart, Database, Workflow, Cloud, Zap } from "lucide-react";
+import { BrainCircuit, Code, Shield, LineChart, Database } from "lucide-react";
 import { FeatureCard } from "@/components/feature-card";
 import { useNavigate } from "react-router-dom";
-import { ButtonGradient } from "@/components/ui/button-gradient";
 
 export const ServicesSection = () => {
   const navigate = useNavigate();
@@ -10,51 +9,39 @@ export const ServicesSection = () => {
   const servicesData = [
     {
       icon: BrainCircuit,
-      title: "Enterprise AI Integration",
-      description: "Transform your business operations with custom AI solutions that automate processes and enhance decision-making capabilities"
+      title: "AI Integration & Automation",
+      description: "Seamlessly integrate AI-powered automation into your platform, optimizing workflows and enhancing decision-making"
     },
     {
-      icon: Workflow,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation strategies powered by AI, helping businesses evolve and stay competitive in the digital age"
+      icon: Code,
+      title: "Custom AI Platform Development",
+      description: "Build tailor-made AI-driven platforms that scale with your business, from concept to full deployment"
     },
     {
       icon: Shield,
-      title: "Secure Cloud Infrastructure",
-      description: "Enterprise-grade cloud solutions with advanced security protocols, ensuring scalability and protection for your mission-critical operations"
+      title: "Secure & Scalable Cloud Solutions",
+      description: "Enterprise-grade cloud infrastructure designed for high performance, security, and global scalability"
     },
     {
       icon: LineChart,
-      title: "AI-Driven Analytics",
-      description: "Turn data into actionable insights with our advanced analytics solutions, powered by machine learning and predictive modeling"
+      title: "Data Intelligence & Analytics",
+      description: "Leverage AI and Big Data to extract valuable insights, optimize operations, and drive data-driven decisions"
     },
     {
-      icon: Cloud,
-      title: "Cloud-Native Solutions",
-      description: "Modern cloud-native applications built for scale, leveraging microservices architecture and containerization for maximum efficiency"
-    },
-    {
-      icon: Zap,
-      title: "Process Automation",
-      description: "Intelligent automation solutions that streamline operations, reduce costs, and improve efficiency across your organization"
+      icon: Database,
+      title: "AI-Powered SaaS & PaaS",
+      description: "Transform your business with custom SaaS/PaaS solutions, fully optimized for AI automation and cloud scalability"
     }
   ];
 
   return (
-    <section className="py-24 bg-secondary/5">
+    <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Enterprise AI Solutions</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Accelerate your digital transformation with our comprehensive suite of AI-powered solutions designed for enterprise success
+          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Revolutionizing businesses with AI-driven automation, intelligent workflows, and scalable cloud-native solutions
           </p>
-          <ButtonGradient 
-            onClick={() => navigate('/contact')}
-            size="lg"
-            className="hover-lift glow mb-12"
-          >
-            Schedule a Consultation
-          </ButtonGradient>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
@@ -63,28 +50,10 @@ export const ServicesSection = () => {
               icon={service.icon}
               title={service.title}
               description={service.description}
-              className="hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="hover:scale-105 transition-transform duration-300"
               onClick={() => navigate('/services')}
             />
           ))}
-        </div>
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
-            Ready to transform your business with AI-powered solutions?
-          </p>
-          <div className="flex gap-4 justify-center">
-            <ButtonGradient 
-              variant="outline"
-              onClick={() => navigate('/platform')}
-            >
-              Explore Platform
-            </ButtonGradient>
-            <ButtonGradient 
-              onClick={() => navigate('/pricing')}
-            >
-              View Pricing
-            </ButtonGradient>
-          </div>
         </div>
       </div>
     </section>
