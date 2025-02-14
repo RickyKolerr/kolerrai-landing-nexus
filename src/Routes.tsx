@@ -24,6 +24,8 @@ import Success from "@/pages/Success";
 // Platform pages
 import Automation from "@/pages/platform/Automation";
 import Campaigns from "@/pages/platform/Campaigns";
+import Analytics from "@/pages/platform/Analytics";
+import Integrations from "@/pages/platform/Integrations";
 
 const Routes = () => {
   return (
@@ -53,6 +55,8 @@ const Routes = () => {
       {/* Platform specific routes */}
       <Route path="/platform/automation" element={<Automation />} />
       <Route path="/platform/campaigns" element={<Campaigns />} />
+      <Route path="/platform/analytics" element={<Analytics />} />
+      <Route path="/platform/integrations" element={<Integrations />} />
       
       <Route path="*" element={<NotFound />} />
     </RouterRoutes>
